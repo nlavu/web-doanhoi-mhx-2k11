@@ -26,7 +26,7 @@ namespace DAOAuction.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANHVU-VAIO\\MSSMLBIZ;Initial Catalog=doantn;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NgocHa-PC;Initial Catalog=doantn;Integrated Security=True")]
         public string webdoantruongConnectionString {
             get {
                 return ((string)(this["webdoantruongConnectionString"]));

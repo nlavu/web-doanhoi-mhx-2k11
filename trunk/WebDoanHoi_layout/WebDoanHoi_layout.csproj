@@ -103,8 +103,10 @@
   <ItemGroup>
     <Content Include="administration\Banner.aspx" />
     <Content Include="administration\DangNhap.aspx" />
+    <Content Include="administration\GopY.aspx" />
     <Content Include="administration\HDNoiBat.aspx" />
     <Content Include="administration\QuangCao.aspx" />
+    <Content Include="administration\templateLoad\GopY\wucGopY.ascx" />
     <Content Include="App_Themes\administration\jquery\apycom\help.txt" />
     <Content Include="App_Themes\administration\jquery\apycom\images\item-pointer-mover.gif" />
     <Content Include="App_Themes\administration\jquery\apycom\images\item-pointer.gif" />
@@ -652,6 +654,7 @@
     <Content Include="DLL\Google.GData.Extensions.dll" />
     <Content Include="DLL\Google.GData.GoogleBase.dll" />
     <Content Include="DLL\Google.GData.Photos.dll" />
+    <Content Include="GopY.aspx" />
     <Content Include="images\active_logo.jpg" />
     <Content Include="images\avatar.jpg" />
     <Content Include="images\Login.png" />
@@ -840,6 +843,13 @@
     <Compile Include="administration\DangNhap.aspx.designer.cs">
       <DependentUpon>DangNhap.aspx</DependentUpon>
     </Compile>
+    <Compile Include="administration\GopY.aspx.cs">
+      <DependentUpon>GopY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administration\GopY.aspx.designer.cs">
+      <DependentUpon>GopY.aspx</DependentUpon>
+    </Compile>
     <Compile Include="administration\HDNoiBat.aspx.cs">
       <DependentUpon>HDNoiBat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -991,6 +1001,13 @@
     </Compile>
     <Compile Include="administration\templateLoad\BaiViet\wucTapTinBaiViet.ascx.designer.cs">
       <DependentUpon>wucTapTinBaiViet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="administration\templateLoad\GopY\wucGopY.ascx.cs">
+      <DependentUpon>wucGopY.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administration\templateLoad\GopY\wucGopY.ascx.designer.cs">
+      <DependentUpon>wucGopY.ascx</DependentUpon>
     </Compile>
     <Compile Include="administration\templateLoad\HoatDong\wucHoatDong.ascx.cs">
       <DependentUpon>wucHoatDong.ascx</DependentUpon>
@@ -1326,6 +1343,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GopY.aspx.cs">
+      <DependentUpon>GopY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GopY.aspx.designer.cs">
+      <DependentUpon>GopY.aspx</DependentUpon>
     </Compile>
     <Compile Include="HeThongToChuc.aspx.cs">
       <DependentUpon>HeThongToChuc.aspx</DependentUpon>

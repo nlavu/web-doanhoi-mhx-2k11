@@ -46,3 +46,9 @@ C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DTOAuction\bin\Debug\DTO
 C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DTOAuction\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DTOAuction\obj\Debug\DTOAuction.dll
 C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DTOAuction\obj\Debug\DTOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\bin\Debug\DTOAuction.dll.config
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\bin\Debug\DTOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\obj\Debug\DTOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\obj\Debug\DTOAuction.pdb

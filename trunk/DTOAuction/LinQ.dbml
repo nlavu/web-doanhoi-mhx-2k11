@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="doantn" Class="LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=CHANHDUC-PC\CHANHDUC;Initial Catalog=doantn;Integrated Security=True" SettingsObjectName="DTOAuction.Properties.Settings" SettingsPropertyName="doantnConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=NgocHa-PC;Initial Catalog=doantn;Integrated Security=True" SettingsObjectName="DTOAuction.Properties.Settings" SettingsPropertyName="doantnConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ALBUM" Member="ALBUMs">
     <Type Name="ALBUM">
       <Column Name="MaAlbum" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -187,6 +187,15 @@
       <Association Name="HOATDONG_THONGBAO" Member="HOATDONG" ThisKey="MaThongBao" OtherKey="MaHoatDong" Type="HOATDONG" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.GOPY" Member="GOPies">
+    <Type Name="GOPY">
+      <Column Name="MaGopY" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDungGopY" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MSSV" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
   <Function Name="dbo.ALBUM_add" Method="ALBUM_add">
     <Parameter Name="TenAlbum" Parameter="tenAlbum" Type="System.String" DbType="NVarChar(100)" />
     <ElementType Name="ALBUM_addResult">
@@ -210,11 +219,12 @@
       <Column Name="TenAlbum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ALBUM_getpaged" Method="ALBUM_getpaged">
+  <Function Name="dbo.ALBUM_getpaged" Method="ALBUM_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.ALBUM_update" Method="ALBUM_update">
     <Parameter Name="MaAlbum" Parameter="maAlbum" Type="System.Int32" DbType="Int" />
@@ -247,11 +257,12 @@
       <Column Name="LinkBaiHat" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.BAIHAT_getpaged" Method="BAIHAT_getpaged">
+  <Function Name="dbo.BAIHAT_getpaged" Method="BAIHAT_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.BAIHAT_update" Method="BAIHAT_update">
     <Parameter Name="MaBaiHat" Parameter="maBaiHat" Type="System.Int32" DbType="Int" />
@@ -321,11 +332,12 @@
       <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.BAIVIET_getpaged" Method="BAIVIET_getpaged">
+  <Function Name="dbo.BAIVIET_getpaged" Method="BAIVIET_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.BAIVIET_LayBaiVietMoiNhat" Method="BAIVIET_LayBaiVietMoiNhat">
     <ElementType Name="BAIVIET_LayBaiVietMoiNhatResult">
@@ -431,11 +443,12 @@
       <Column Name="BiKhoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.CAUHOIKHAOSAT_getpaged" Method="CAUHOIKHAOSAT_getpaged">
+  <Function Name="dbo.CAUHOIKHAOSAT_getpaged" Method="CAUHOIKHAOSAT_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.CAUHOIKHAOSAT_update" Method="CAUHOIKHAOSAT_update">
     <Parameter Name="MaCauHoiKhaoSat" Parameter="maCauHoiKhaoSat" Type="System.Int32" DbType="Int" />
@@ -466,11 +479,12 @@
       <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.CHUYENMUC_getpaged" Method="CHUYENMUC_getpaged">
+  <Function Name="dbo.CHUYENMUC_getpaged" Method="CHUYENMUC_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.CHUYENMUC_update" Method="CHUYENMUC_update">
     <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
@@ -512,11 +526,12 @@
       <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.DANGKYHOATDONG_getpaged" Method="DANGKYHOATDONG_getpaged">
+  <Function Name="dbo.DANGKYHOATDONG_getpaged" Method="DANGKYHOATDONG_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.DANGKYHOATDONG_selectbySinhVien" Method="DANGKYHOATDONG_selectbySinhVien">
     <Parameter Name="maSV" Type="System.Int32" DbType="Int" />
@@ -609,11 +624,12 @@
     <Parameter Name="NgayXoa" Parameter="ngayXoa" Type="System.DateTime" DbType="DateTime" />
     <ElementType IdRef="ID1" />
   </Function>
-  <Function Name="dbo.DANGKYMUONPHONG_getpaged" Method="DANGKYMUONPHONG_getpaged">
+  <Function Name="dbo.DANGKYMUONPHONG_getpaged" Method="DANGKYMUONPHONG_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.DANGKYMUONPHONG_selectBySinhVien" Method="DANGKYMUONPHONG_selectBySinhVien">
     <Parameter Name="maSV" Type="System.Int32" DbType="Int" />
@@ -671,11 +687,12 @@
       <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.DAPANKHAOSAT_getpaged" Method="DAPANKHAOSAT_getpaged">
+  <Function Name="dbo.DAPANKHAOSAT_getpaged" Method="DAPANKHAOSAT_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.DAPANKHAOSAT_layDapAnTheoMaCauHoi" Method="DAPANKHAOSAT_layDapAnTheoMaCauHoi">
     <Parameter Name="MaCauHoi" Parameter="maCauHoi" Type="System.Int32" DbType="Int" />
@@ -717,11 +734,12 @@
       <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GIOITHIEU_getpaged" Method="GIOITHIEU_getpaged">
+  <Function Name="dbo.GIOITHIEU_getpaged" Method="GIOITHIEU_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.GIOITHIEU_update" Method="GIOITHIEU_update">
     <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
@@ -755,11 +773,12 @@
       <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
     </ElementType>
   </Function>
-  <Function Name="dbo.HETHONGTOCHUC_getpaged" Method="HETHONGTOCHUC_getpaged">
+  <Function Name="dbo.HETHONGTOCHUC_getpaged" Method="HETHONGTOCHUC_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.HETHONGTOCHUC_update" Method="HETHONGTOCHUC_update">
     <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
@@ -793,11 +812,12 @@
       <Column Name="MaAlbum" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.HINHANH_getpaged" Method="HINHANH_getpaged">
+  <Function Name="dbo.HINHANH_getpaged" Method="HINHANH_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.HINHANH_update" Method="HINHANH_update">
     <Parameter Name="MaHinhAnh" Parameter="maHinhAnh" Type="System.Int32" DbType="Int" />
@@ -854,11 +874,12 @@
       <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.HOATDONG_getpaged" Method="HOATDONG_getpaged">
+  <Function Name="dbo.HOATDONG_getpaged" Method="HOATDONG_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.HOATDONG_update" Method="HOATDONG_update">
     <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
@@ -893,11 +914,12 @@
       <Column Name="YKienKhac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.KHAOSAT_getpaged" Method="KHAOSAT_getpaged">
+  <Function Name="dbo.KHAOSAT_getpaged" Method="KHAOSAT_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.KHAOSAT_update" Method="KHAOSAT_update">
     <Parameter Name="MaDapAn" Parameter="maDapAn" Type="System.Int32" DbType="Int" />
@@ -938,11 +960,12 @@
       <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.LOAIBAIVIET_getpaged" Method="LOAIBAIVIET_getpaged">
+  <Function Name="dbo.LOAIBAIVIET_getpaged" Method="LOAIBAIVIET_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.LOAIBAIVIET_TimKiemTheoChuyenMuc" Method="LOAIBAIVIET_TimKiemTheoChuyenMuc">
     <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
@@ -981,11 +1004,12 @@
       <Column Name="TenLoaiHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.LOAIHOATDONG_getpaged" Method="LOAIHOATDONG_getpaged">
+  <Function Name="dbo.LOAIHOATDONG_getpaged" Method="LOAIHOATDONG_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.LOAIHOATDONG_update" Method="LOAIHOATDONG_update">
     <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
@@ -1015,11 +1039,12 @@
       <Column Name="TenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.LOAIVAITRO_getpaged" Method="LOAIVAITRO_getpaged">
+  <Function Name="dbo.LOAIVAITRO_getpaged" Method="LOAIVAITRO_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.LOAIVAITRO_update" Method="LOAIVAITRO_update">
     <Parameter Name="MaLoaiVaiTro" Parameter="maLoaiVaiTro" Type="System.Int32" DbType="Int" />
@@ -1078,11 +1103,12 @@
       <Column Name="TenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.NGUOIDUNG_getpaged" Method="NGUOIDUNG_getpaged">
+  <Function Name="dbo.NGUOIDUNG_getpaged" Method="NGUOIDUNG_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.NGUOIDUNG_update" Method="NGUOIDUNG_update">
     <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
@@ -1145,11 +1171,12 @@
       <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.TAPTINBAIVIET_getpaged" Method="TAPTINBAIVIET_getpaged">
+  <Function Name="dbo.TAPTINBAIVIET_getpaged" Method="TAPTINBAIVIET_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.TAPTINBAIVIET_update" Method="TAPTINBAIVIET_update">
     <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
@@ -1187,11 +1214,12 @@
       <Column Name="MaThongBao" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.TAPTINTHONGBAO_getpaged" Method="TAPTINTHONGBAO_getpaged">
+  <Function Name="dbo.TAPTINTHONGBAO_getpaged" Method="TAPTINTHONGBAO_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.TAPTINTHONGBAO_update" Method="TAPTINTHONGBAO_update">
     <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
@@ -1242,11 +1270,12 @@
       <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.THONGBAO_getpaged" Method="THONGBAO_getpaged">
+  <Function Name="dbo.THONGBAO_getpaged" Method="THONGBAO_getpaged" IsComposable="true">
     <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
     <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
     <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
     <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.THONGBAO_LayThongBaoTheoMaHoatDong" Method="THONGBAO_LayThongBaoTheoMaHoatDong">
     <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
@@ -1265,5 +1294,21 @@
     <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
     <Parameter Name="NgayDang" Parameter="ngayDang" Type="System.DateTime" DbType="DateTime" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GOPY_add" Method="GOPY_add">
+    <Parameter Name="tieude" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="noidung" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="mssv" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GOPY_getall" Method="GOPY_getall">
+    <ElementType Name="GOPY_getallResult">
+      <Column Name="MaGopY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDungGopY" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MSSV" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

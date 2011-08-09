@@ -70,3 +70,11 @@ C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTO
 C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.dll
 C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\bin\Debug\DAOAuction.dll.config
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\bin\Debug\DAOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\bin\Debug\DAOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\bin\Debug\DTOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\obj\Debug\DAOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\obj\Debug\DAOAuction.pdb

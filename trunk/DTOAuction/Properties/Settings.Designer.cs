@@ -32,5 +32,25 @@ namespace DTOAuction.Properties {
                 return ((string)(this["doantnConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHANHDUC-PC\\CHANHDUC;Initial Catalog=doantn;Integrated Security=True")]
+        public string doantnConnectionString2 {
+            get {
+                return ((string)(this["doantnConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NgocHa-PC;Initial Catalog=doantn;Integrated Security=True")]
+        public string doantnConnectionString1 {
+            get {
+                return ((string)(this["doantnConnectionString1"]));
+            }
+        }
     }
 }
