@@ -59,6 +59,7 @@
     <Compile Include="BUSDangKyMuonPhong.cs" />
     <Compile Include="BUSDapAnKhaoSat.cs" />
     <Compile Include="BUSGioiThieu.cs" />
+    <Compile Include="BUSGopY.cs" />
     <Compile Include="BUSHeThongToChuc.cs" />
     <Compile Include="BUSHinhAnh.cs" />
     <Compile Include="BUSHoatDong.cs" />

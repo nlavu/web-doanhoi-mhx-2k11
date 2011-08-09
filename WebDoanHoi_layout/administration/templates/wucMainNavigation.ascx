@@ -46,6 +46,9 @@
                 Text="Quản lý banner" NavigateUrl="../Banner.aspx"></asp:MenuItem>
                   <asp:MenuItem ImageUrl="~/administration/Common/ico-dashboard.png" 
                 Text="Quản lý hoạt động nổi bật" NavigateUrl="../HDNoiBat.aspx"></asp:MenuItem>
+            <asp:MenuItem ImageUrl="~/administration/Common/ico-dashboard.png" 
+                Text="Xem góp ý" NavigateUrl="../GopY.aspx"></asp:MenuItem>
+      
         </Items>
     </asp:Menu>   
 </div>

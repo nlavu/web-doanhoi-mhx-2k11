@@ -88,3 +88,12 @@ D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuc
 D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
 D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
 D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\BUSAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\BUSAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\DAOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\DTOAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\DAOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\obj\Debug\BUSAuction.dll
+C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\obj\Debug\BUSAuction.pdb
