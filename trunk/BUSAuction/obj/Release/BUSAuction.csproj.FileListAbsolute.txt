@@ -1,0 +1,9 @@
+D:\WebDoanHoi_vpm_0109\BUSAuction\bin\Release\BUSAuction.dll
+D:\WebDoanHoi_vpm_0109\BUSAuction\bin\Release\BUSAuction.pdb
+D:\WebDoanHoi_vpm_0109\BUSAuction\bin\Release\DAOAuction.dll
+D:\WebDoanHoi_vpm_0109\BUSAuction\bin\Release\DTOAuction.dll
+D:\WebDoanHoi_vpm_0109\BUSAuction\bin\Release\DAOAuction.pdb
+D:\WebDoanHoi_vpm_0109\BUSAuction\bin\Release\DTOAuction.pdb
+D:\WebDoanHoi_vpm_0109\BUSAuction\obj\Release\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_0109\BUSAuction\obj\Release\BUSAuction.dll
+D:\WebDoanHoi_vpm_0109\BUSAuction\obj\Release\BUSAuction.pdb

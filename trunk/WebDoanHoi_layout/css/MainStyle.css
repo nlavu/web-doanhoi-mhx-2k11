@@ -1,0 +1,146 @@
+﻿
+#content_container
+{
+	position: inherit;
+	margin: 0px auto;
+	width: 960px;
+	background-color: #818689;
+}
+.content_container
+{
+	}
+.content_container P
+{
+	font-size: 0.9em;
+}
+.content_container LI
+{
+	font-size: 0.9em ;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+.chua
+{
+	height:30px;
+	}	
+/*
+.columns_container
+{
+	position:relative;
+	min-height:1px;
+	_height:-1px;
+	padding-right:300px;
+	}
+.columns_container .columns_left
+{
+	position:relative;
+	float: left;
+	width:100%;
+	margin-left:-610px;
+}
+
+  
+.columns_container .columns_right
+{
+	position: relative;
+	width: 610px;
+	margin-left:610px;
+	float: left;
+	
+	 
+}
+	 
+	.ajaxLoadImageBox
+	{
+	width:350px;	 
+	}
+/* End Css Page DauGia.apsx*/
+ 
+.header_container
+{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100px;
+	background-image: url(theme1/images/header.png);
+	background-repeat: repeat-x;
+}
+
+#header2
+{
+   padding: 0px; margin: 0px; width: 780px; height: 184px;
+   background-image: url(images/Header.gif);
+}
+
+#headermenu
+{
+   position: relative; top: 153px; left: 250px; width: 500px;
+   padding: 2px 2px 2px 2px;
+}
+
+#breadcrumb
+{
+   background-color: #202020; color: White; padding: 3px; font-size: 10px;
+}
+
+#footermenu
+{
+   text-align: center; padding-top: 10px;
+}
+
+
+
+b{font-size: 110%;}
+em{color: red;}
+
+#topsection{
+background: #EAEAEA;
+height: 90px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+.columns_container{
+float: left;
+width: 100%;
+}
+
+.columns_right{
+margin-left: 400px; /*Set left margin to LeftColumnWidth*/
+}
+.hinhthucdaugia .columns_right .loaidaugia
+{
+	  
+	position: relative;
+	text-align: right;
+	right: 0px;
+}
+.columns_left{
+float: left;
+width: 350px; /*Width of left column*/
+margin-left: -960px; /*Set left margin to -(MainContainerWidth)*/
+
+padding :8px;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+

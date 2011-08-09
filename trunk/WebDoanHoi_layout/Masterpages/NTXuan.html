@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MasterPage</title>
+    <link href="../App_Themes/NTXuan_skin.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style-3-col.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Blue/NTX-Blue.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Blue/jquery/css/custom-theme/jquery-ui-1.8.5.custom.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Blue/jquery/apycom/menu.css" rel="stylesheet" type="text/css" />    
+    <script src="../js/MyCookie.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../App_Themes/Blue/jquery/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../App_Themes/Blue/jquery/js/jquery-ui-1.8.5.custom.min.js"></script>
+    <script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
+    <script src="../App_Themes/Blue/jquery/apycom/menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			var mau = getCookie('skin');
+			if(mau == 'blue'){
+				skin_blue($('.skin_blue'));
+			}else
+				skin_orange($('.skin_blue'));				
+		});
+	</script>
+    <!--
+    	Tạo accordion cho các chuyên mục
+    -->
+    <script>
+	/*$(function() {
+		var stop = false;
+		$( "#accordion h3" ).click(function( event ) {
+			if ( stop ) {
+				event.stopImmediatePropagation();
+				event.preventDefault();
+				stop = false;
+			}
+		});
+		$( "#accordion" )
+			.accordion({
+				header: "> div > h3"
+			})
+			.sortable({
+				axis: "y",
+				handle: "h3",
+				stop: function() {
+					stop = true;
+				}
+			});
+	});*/
+	</script>
+    <script type="text/javascript">
+	$(function() {
+		$(".column").sortable({
+			connectWith: '.column',
+			sort: function(event, ui) {
+				ui.item.fadeTo('fast', 0.8);
+			},
+			stop: function(event, ui) {
+				ui.item.fadeTo('fast', 1);
+			}
+		});
+
+		$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+			.find(".portlet-header")
+				.addClass("ui-corner-top ui-state-default")
+				.prepend('<span class="ui-icon ui-icon-minusthick"></span>')
+				.end()
+			.find(".portlet-content");
+
+		$(".portlet-header .ui-icon").click(function() {
+			$(this).toggleClass("ui-icon-minusthick").toggleClass("ui-icon-plusthick");
+			$(this).parents(".portlet:first").find(".portlet-content").slideToggle('fast');
+		});
+		$(".column").disableSelection();
+	});
+	</script>
+     <!--Design module & footer-->
+    <script type="text/javascript">
+        $(function () {
+            $(".post-title,.post-title-1,#footer").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all");
+            $(".moduleHeader,.moduleHeader-1").addClass("ui-corner-all ui-state-default");
+            $("#footer-design").addClass("ui-corner-bottom ui-state-default");
+        });
+	</script>
+    <script>
+		function skin_blue(obj){
+			if($(obj).find('div').attr('class') == 'skin_blue_selected'){
+				return;
+			}
+			$(obj).find('div').attr('class','skin_blue_selected');
+			$('.skin_orange_selected').attr('class','');
+			xulymau('blue');
+			setCookie('skin','blue',365);
+		}
+		function skin_orange(obj){
+			if($(obj).find('div').attr('class') == 'skin_orange_selected'){
+				return;
+			}
+			$(obj).find('div').attr('class','skin_orange_selected');
+			$('.skin_blue_selected').attr('class','');
+			xulymau('orange');
+			setCookie('skin','orange',365);
+		}
+		function xulymau(mau){
+			var mau1 = '';//Mau set
+			var mau2 = '';//Mau remove
+			if(mau == 'blue')
+			{
+				mau1 = 'Blue';
+				mau2 = 'Orange';
+			}else{
+				mau2 = 'Blue';
+				mau1 = 'Orange';
+			}
+			var arrLink = document.getElementsByTagName('link');
+			for(var i = 0; i < arrLink.length;i++)
+			{
+				var temp = $(arrLink[i]).attr('href');
+				if(temp.search('/'+ mau2 + '/')>0){
+					var patt = new RegExp(mau2,'g');
+					patt.compile(patt);
+					temp = temp.replace(patt,mau1);
+					$(arrLink[i]).attr('href',temp);		
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+<form runat="server" >
+  <div id="mainPage">   
+	<div id="header">
+       	  <div id="header-flash">
+              <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="125">
+                <param name="movie" value="../Uploads/title.swf" />
+                <param name="quality" value="high" />
+                <param name="wmode" value="opaque" />
+                <param name="swfversion" value="6.0.65.0" />
+                <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+                <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+                <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="../Uploads/title.swf" width="1000" height="125">
+                  <!--<![endif]-->
+                  <param name="quality" value="high" />
+                  <param name="wmode" value="opaque" />
+                  <param name="swfversion" value="6.0.65.0" />
+                  <param name="expressinstall" value="../Scripts/expressInstall.swf" />
+                  <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                  <div>
+                    <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                    <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+                  </div>
+                  <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+              </object>
+            </div>
+            <div id="header-submenu">
+              <label ID="lblMenu" runat="server" Text="Label"></label>
+          	</div>
+            <div id="header-submenu">
+                <div style="float:right;width:150px;line-height:23px; margin-left:10px">
+                    <a style="float:left">Chọn màu: </a>
+                    <div class="skin_blue" onclick="skin_blue(this);">
+                        <div class="skin_blue_selected"></div>
+                    </div>
+                    <div class="skin_orange" onclick="skin_orange(this)">
+                        <div class=""></div>
+                    </div>
+                </div>
+            	<div style="float:right">
+                    <label ID="txtTime" runat="server">Văn bản - tài liệu</label>
+                    <select>
+                        <option Value="0">Trang web liên kết</option>
+                        <option Value="http://www.vnuhcm.edu.vn/">Đại học Quốc gia TP.HCM</option>
+                        <option Value="http://hcmus.edu.vn/">Trường DH KHTN TP.HCM</option>
+                        <option Value="http://www.fit.hcmus.edu.vn/vn/">Khoa CNTT</option>
+                        <option Value="http://www.thanhdoan.hochiminhcity.gov.vn/webtd/vn/Home.aspx">Thành 
+                        Đoàn TP.HCM</option>
+                        <option Value="http://tuoitre.vn/">Báo Tuổi Trẻ</option>
+                        <option Value="http://www.thanhnien.com.vn/pages/default.aspx">Báo Thanh 
+                        Niên</option>
+                    </select>
+            </div>
+      </div>
+        <!-- header end -->
+        <div id="content">
+            <div id="posts">
+                <div id="BVNoiBatDiv">
+                    <div id='imgBVNoiBat'><a href=''><img align='left' class='hinhdaidienTinNoiBat' src ='../Uploads/anh_dai_dien128201003025.jpg' max-height = '500px' width = '514px'/></a>
+                    </div>
+                    <div id='BVNoiBatNhatDiv'>
+                          <div id='BVNoiBatNhatTitle'>
+                              <a href='BaiViet.aspx?id='>Bai viet</a>
+                          </div>
+                          <div id='BVNoiBatNhatContent'>			<a class='XemTiep' href='BaiViet.aspx?id='><i>(Xem tiếp >>)</i></a>
+                          </div>
+                     </div>
+                    <div id="DSBVNoiBatDiv">
+                        <div class="DSBVNoiBatDiv-area">
+                            <div class="imgDSBVNoiBatDiv">
+                                <img src="../Uploads/1.jpg" style ='width:125px; max-height:150px' />
+                            </div>
+                            <div class="DSBVNoiBatDiv-title">
+                                <a style='text-align:center' href ='BaiViet.aspx?id='>Alain</a>
+                            </div>
+                        </div>
+                        <div class="DSBVNoiBatDiv-area">
+                            <div class="imgDSBVNoiBatDiv">
+                                <img src="../Uploads/1.jpg" style ='width:125px; max-height:150px' />
+                            </div>
+                            <div class="DSBVNoiBatDiv-title">
+                                <a style='text-align:center' href ='BaiViet.aspx?id='>Alain</a>
+                            </div>
+                        </div>
+                        <div class="DSBVNoiBatDiv-area">
+                            <div class="imgDSBVNoiBatDiv">
+                                <img src="../Uploads/1.jpg" style ='width:125px; max-height:150px' />
+                            </div>
+                            <div class="DSBVNoiBatDiv-title">
+                                <a style='text-align:center' href ='BaiViet.aspx?id='>Alain</a>
+                            </div>
+                        </div>
+                        <div class="DSBVNoiBatDiv-area">
+                            <div class="imgDSBVNoiBatDiv">
+                               <img src="../Uploads/1.jpg" style ='width:125px; max-height:150px' />
+                            </div>
+                            <div class="DSBVNoiBatDiv-title">
+                                <a style='text-align:center' href ='BaiViet.aspx?id='>Alain</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class='column'>
+            	<div class='portlet'>
+                	<div class='portlet-header'>
+                    	Ten chuyen muc
+                    </div>
+                    <div class='portlet-content'>
+                    	<div class='imgBaiViet'>
+                        	<a href='BaiViet.aspx?id='><img align='left' class='hinhdaidienTinNoiBat' src ='Uploads/' 	max-height='250px' width = '150px'/></a>
+                         </div>
+                         <div class='BaiViet'>
+                         	<a class='BaiVietTitle' href='BaiViet.aspx?id='></a><br/><p class='BaiVietContent'>Tom tat</p><a class='XemTiep' href ='BaiViet.aspx?id='><i>(Xem tiếp >>)</i></a><br />
+                          </div>
+                     </div>
+                  </div>
+               </div>
+         	</div>
+            <!-- posts end -->
+            <div id="sidebar"> 
+                <div id="sidebar-left">  
+                            <div class="module">
+                            	<div class="post-title">
+                                    <div class="moduleHeader"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                                        Tin mới nhất
+                                    </div>
+                                    <div class="post-content" style="margin-top:6px">
+                                         <p><img src = 'images/bullet.GIF' height='6px' width='6px'/><a href ='BaiViet.aspx?id='> Nguyen Thanh Xuan </a>
+                                         </p>
+                                         <p><img src = 'images/bullet.GIF' height='6px' width='6px'/><a href ='BaiViet.aspx?id='> Nguyen Thanh Xuan </a>
+                                         </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="module">
+	                            <div class="post-title">
+                                    <div class="moduleHeader"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                                        Hoạt động nổi bật
+                                    </div>
+                                    <div class="post-content">
+                                        <img src="../Uploads/img006.jpeg" width="195px"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="module">
+	                            <div class="post-title"  >
+                                    <div class="moduleHeader"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                                        Khảo sát
+                                    </div>
+                                    <div class="post-content">
+                                    	<p>
+                                    	  <input type="radio" value="123" />
+                                   	  </p>
+                                    	<p>
+                                    	  <input type="radio" value="123" />
+                                   	  </p>
+                                    	<p>
+                                    	  <input type="radio" value="123" />
+                                  	  </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="module">
+	                            <div class="post-title">
+                                    <div class="moduleHeader"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                                        Đánh giá
+                                    </div>
+                                    <div class="post-content">
+                                        <p>
+                                    	  <input type="radio" value="123" />
+                                   	  </p>
+                                    	<p>
+                                    	  <input type="radio" value="123" />
+                                   	  </p>
+                                    	<p>
+                                    	  <input type="radio" value="123" />
+                                  	  </p>
+                                    </div>
+                                </div>
+
+                            </div>
+   
+     
+                </div>
+                <!-- sidebar1 end -->
+                <div id="sidebar-right">
+                	<div class="module">
+	                     <div class="post-title">
+                            <div class="moduleHeader"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                                Đăng nhập
+                            </div>
+                            <div class="post-content">
+                                <asp:Panel ID="PanelDangNhap" runat="server">
+                                    <table cellpadding="1px" cellspacing="1px" width="100%">
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Label1" runat="server" Text="Tên đăng nhập"></asp:Label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:TextBox ID="txtusername" runat="server" BorderColor="Black" BorderWidth="1px" Width="150px"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="Label2" runat="server" Text="Mật khẩu"></asp:Label>
+                                                &nbsp; - &nbsp;
+                                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/QuenMatKhau.aspx#">Quên mật khẩu</asp:HyperLink>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:TextBox ID="txtpassword" runat="server" TextMode="Password" BorderColor="Black"
+                                                    BorderWidth="1px" Width="150px"></asp:TextBox>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <asp:Button ID="btDangNhap" runat="server" Text="Đăng Nhập" OnClick="btDangNhap_Click"
+                                                    Style="height: 26px" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                                <asp:Panel ID="PanelDangXuat" runat="server">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Chào bạn
+                                            </td>
+                                            <tr>
+                                                <td style="text-align: center">
+                                                    <asp:HyperLink ID="hlhoten" runat="server"></asp:HyperLink>
+                                                </td>
+                                            </tr>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:HyperLink ID="hlVaiTro" runat="server"></asp:HyperLink>
+                                                -
+                                                <asp:Button ID="btDangXuat" runat="server" Text="Đăng Xuất" OnClick="btDangXuat_Click" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                                <asp:Panel ID="PanelDangNhapSai" runat="server">
+                                    <table>
+                                        <tr>                   
+                                               <td>Đăng nhập thất bại.</td> 
+                                           </tr>
+                                                <tr>
+                                                <td>Lý do: Tên đăng nhâp hoặc mật khẩu sai</td>
+                                                </tr>                  
+                                   
+                                        <tr>                                     
+                                        <td> <asp:Button ID="btDangNhapLai" runat="server" Text="Đăng nhập lại" OnClick="btDangNhapLai_Click" /></td>       
+                                        </tr>
+                                    </table>
+                                </asp:Panel>
+                            </div>
+                        </div>
+					</div>
+                    <div class="module">
+                    	<div class="post-title">
+                           <div class="moduleHeader"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                                Quảng cáo
+                            </div>
+                            <div style="width:194px;margin-top:10px;">
+                                <asp:ImageButton ID="Image1" runat="server" Width="196px" ImageAlign="Middle"/>
+                            </div>
+                            <div style="width:194px">
+                                <asp:ImageButton ID="Image2" runat="server" Width="196px" ImageAlign="Middle"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar2 end -->
+                <div id="slideshow">
+                    <div class="post-title-1">
+                        <div class="moduleHeader-1"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                            Hình ảnh hoạt động
+                        </div>    
+                        <div style="margin-top:10px;" class="post-content" >
+                            <div style="width: 400px; font-family: arial,sans-serif; font-size: 13px;">
+                                <div>
+                                    <embed type="application/x-shockwave-flash" src="http://picasaweb.google.com/s/c/bin/slideshow.swf"
+                                        width="400" height="300" flashvars="host=picasaweb.google.com&captions=1&hl=en_US&feat=flashalbum&RGB=0x000000&feed=http%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F115481308871412250631%3Falt%3Drss%26kind%3Dphoto%26access%3Dpublic%26psc%3DF%26q%26uname%3D115481308871412250631"
+                                        pluginspage="http://www.macromedia.com/go/getflashplayer"></embed></div>
+                                <span ><a href="http://picasaweb.google.com/115481308871412250631?feat=flashalbum"
+                                    style="color: #3964c2">Xem tất cả hình ảnh</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="baihat">
+                    <div class="post-title-1">
+                        <div class="moduleHeader-1"><span style="float:right" class="ui-icon ui-icon-grip-diagonal-se"></span>
+                            Bài hát
+                        </div>
+                         <div style="margin-top:10px;" class="post-content" >
+                              
+                            <embed src="http://static.mp3.zing.vn/skins/gentle/flash/mp3playlist.swf?xmlURL=http://mp3.zing.vn/play/?pid=IW7OWW9O||1&songID=0&_mp3=&autoplay=false&wmode=transparent" quality="high" wmode="transparent" type="application/x-shockwave-flash" width="400" height="400">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar2 end -->
+</div>
+        <!-- content end -->
+        <div id="footer">
+            <p>
+                Đoàn TNCS HCM - Hội SV Trường ĐH KHTN TP.HCM<br />
+                Điện thoại: (08) 3835 4008 | Email: doantn@hcmuns.edu.vn | Địa chỉ: 227 Nguyễn Văn
+                Cừ, Q5, TP.HCM<br />
+            </p>
+            <div id="footer-design">
+                <p style="text-align:center;line-height:5px;font-size:8px;"></p>
+            </div>
+        </div>
+        <!-- footer end -->  
+   </div>    
+</form>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+  </script>
+</body>
+</html>

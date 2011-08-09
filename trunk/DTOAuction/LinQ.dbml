@@ -1,0 +1,1269 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="doantn" Class="LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CHANHDUC-PC\CHANHDUC;Initial Catalog=doantn;Integrated Security=True" SettingsObjectName="DTOAuction.Properties.Settings" SettingsPropertyName="doantnConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ALBUM" Member="ALBUMs">
+    <Type Name="ALBUM">
+      <Column Name="MaAlbum" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenAlbum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="ALBUM_HINHANH" Member="HINHANHs" ThisKey="MaAlbum" OtherKey="MaAlbum" Type="HINHANH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BAIHAT" Member="BAIHATs">
+    <Type Name="BAIHAT">
+      <Column Name="MaBaiHat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenBaiHat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkBaiHat" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BAIVIET" Member="BAIVIETs">
+    <Type Name="BAIVIET">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="LOAIBAIVIET_BAIVIET" Member="LOAIBAIVIET" ThisKey="MaLoaiBaiViet" OtherKey="MaLoaiBaiViet" Type="LOAIBAIVIET" IsForeignKey="true" />
+      <Association Name="NGUOIDUNG_BAIVIET" Member="NGUOIDUNG" ThisKey="MaNguoiDang" OtherKey="MaNguoiDung" Type="NGUOIDUNG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CAUHOIKHAOSAT" Member="CAUHOIKHAOSATs">
+    <Type Name="CAUHOIKHAOSAT">
+      <Column Name="MaCauHoiKhaoSat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BiKhoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CAUHOIKHAOSAT_DAPANKHAOSAT" Member="DAPANKHAOSATs" ThisKey="MaCauHoiKhaoSat" OtherKey="MaCauHoi" Type="DAPANKHAOSAT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHUYENMUC" Member="CHUYENMUCs">
+    <Type Name="CHUYENMUC">
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="CHUYENMUC_LOAIBAIVIET" Member="LOAIBAIVIETs" ThisKey="MaChuyenMuc" OtherKey="MaChuyenMuc" Type="LOAIBAIVIET" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DANGKYHOATDONG" Member="DANGKYHOATDONGs">
+    <Type Name="DANGKYHOATDONG">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="HOATDONG_DANGKYHOATDONG" Member="HOATDONG" ThisKey="MaHoatDong" OtherKey="MaHoatDong" Type="HOATDONG" IsForeignKey="true" />
+      <Association Name="NGUOIDUNG_DANGKYHOATDONG" Member="NGUOIDUNG" ThisKey="MaNguoiDung" OtherKey="MaNguoiDung" Type="NGUOIDUNG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DANGKYMUONPHONG" Member="DANGKYMUONPHONGs">
+    <Type Name="DANGKYMUONPHONG" Id="ID1">
+      <Column Name="MaDangKy" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySuDung" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MucDich" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DonViMuon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KQPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KetQua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="NGUOIDUNG_DANGKYMUONPHONG" Member="NGUOIDUNG" ThisKey="MaNguoiDung" OtherKey="MaNguoiDung" Type="NGUOIDUNG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DAPANKHAOSAT" Member="DAPANKHAOSATs">
+    <Type Name="DAPANKHAOSAT">
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="DAPANKHAOSAT_KHAOSAT" Member="KHAOSATs" ThisKey="MaDapAn" OtherKey="MaDapAn" Type="KHAOSAT" />
+      <Association Name="CAUHOIKHAOSAT_DAPANKHAOSAT" Member="CAUHOIKHAOSAT" ThisKey="MaCauHoi" OtherKey="MaCauHoiKhaoSat" Type="CAUHOIKHAOSAT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GIOITHIEU" Member="GIOITHIEUs">
+    <Type Name="GIOITHIEU">
+      <Column Name="MaBai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HETHONGTOCHUC" Member="HETHONGTOCHUCs">
+    <Type Name="HETHONGTOCHUC">
+      <Column Name="MaBai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HINHANH" Member="HINHANHs">
+    <Type Name="HINHANH">
+      <Column Name="MaHinhAnh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaAlbum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ALBUM_HINHANH" Member="ALBUM" ThisKey="MaAlbum" OtherKey="MaAlbum" Type="ALBUM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOATDONG" Member="HOATDONGs">
+    <Type Name="HOATDONG">
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDienRa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianBatDauDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThoiGianKetThucDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="HOATDONG_DANGKYHOATDONG" Member="DANGKYHOATDONGs" ThisKey="MaHoatDong" OtherKey="MaHoatDong" Type="DANGKYHOATDONG" />
+      <Association Name="HOATDONG_THONGBAO" Member="THONGBAO" ThisKey="MaHoatDong" OtherKey="MaThongBao" Type="THONGBAO" Cardinality="One" />
+      <Association Name="LOAIHOATDONG_HOATDONG" Member="LOAIHOATDONG" ThisKey="MaLoaiHoatDong" OtherKey="MaLoaiHoatDong" Type="LOAIHOATDONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHAOSAT" Member="KHAOSATs">
+    <Type Name="KHAOSAT">
+      <Column Name="MaYKKS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YKienKhac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="DAPANKHAOSAT_KHAOSAT" Member="DAPANKHAOSAT" ThisKey="MaDapAn" OtherKey="MaDapAn" Type="DAPANKHAOSAT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIBAIVIET" Member="LOAIBAIVIETs">
+    <Type Name="LOAIBAIVIET">
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LOAIBAIVIET_BAIVIET" Member="BAIVIETs" ThisKey="MaLoaiBaiViet" OtherKey="MaLoaiBaiViet" Type="BAIVIET" />
+      <Association Name="CHUYENMUC_LOAIBAIVIET" Member="CHUYENMUC" ThisKey="MaChuyenMuc" OtherKey="MaChuyenMuc" Type="CHUYENMUC" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIHOATDONG" Member="LOAIHOATDONGs">
+    <Type Name="LOAIHOATDONG">
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoaiHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAIHOATDONG_HOATDONG" Member="HOATDONGs" ThisKey="MaLoaiHoatDong" OtherKey="MaLoaiHoatDong" Type="HOATDONG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAIVAITRO" Member="LOAIVAITROs">
+    <Type Name="LOAIVAITRO">
+      <Column Name="MaLoaiVaiTro" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAIVAITRO_NGUOIDUNG" Member="NGUOIDUNGs" ThisKey="MaLoaiVaiTro" OtherKey="MaVaiTro" Type="NGUOIDUNG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NGUOIDUNG" Member="NGUOIDUNGs">
+    <Type Name="NGUOIDUNG">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="MaVaiTro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NGUOIDUNG_BAIVIET" Member="BAIVIETs" ThisKey="MaNguoiDung" OtherKey="MaNguoiDang" Type="BAIVIET" />
+      <Association Name="NGUOIDUNG_DANGKYHOATDONG" Member="DANGKYHOATDONGs" ThisKey="MaNguoiDung" OtherKey="MaNguoiDung" Type="DANGKYHOATDONG" />
+      <Association Name="NGUOIDUNG_DANGKYMUONPHONG" Member="DANGKYMUONPHONGs" ThisKey="MaNguoiDung" OtherKey="MaNguoiDung" Type="DANGKYMUONPHONG" />
+      <Association Name="LOAIVAITRO_NGUOIDUNG" Member="LOAIVAITRO" ThisKey="MaVaiTro" OtherKey="MaLoaiVaiTro" Type="LOAIVAITRO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAPTINBAIVIET" Member="TAPTINBAIVIETs">
+    <Type Name="TAPTINBAIVIET">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAPTINTHONGBAO" Member="TAPTINTHONGBAOs">
+    <Type Name="TAPTINTHONGBAO">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="THONGBAO_TAPTINTHONGBAO" Member="THONGBAO" ThisKey="MaThongBao" OtherKey="MaThongBao" Type="THONGBAO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THONGBAO" Member="THONGBAOs">
+    <Type Name="THONGBAO">
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="THONGBAO_TAPTINTHONGBAO" Member="TAPTINTHONGBAOs" ThisKey="MaThongBao" OtherKey="MaThongBao" Type="TAPTINTHONGBAO" />
+      <Association Name="HOATDONG_THONGBAO" Member="HOATDONG" ThisKey="MaThongBao" OtherKey="MaHoatDong" Type="HOATDONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ALBUM_add" Method="ALBUM_add">
+    <Parameter Name="TenAlbum" Parameter="tenAlbum" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="ALBUM_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ALBUM_delete" Method="ALBUM_delete">
+    <Parameter Name="MaAlbum" Parameter="maAlbum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ALBUM_get" Method="ALBUM_get">
+    <Parameter Name="MaAlbum" Parameter="maAlbum" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ALBUM_getResult">
+      <Column Name="MaAlbum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenAlbum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ALBUM_getall" Method="ALBUM_getall">
+    <ElementType Name="ALBUM_getallResult">
+      <Column Name="MaAlbum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenAlbum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ALBUM_getpaged" Method="ALBUM_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.ALBUM_update" Method="ALBUM_update">
+    <Parameter Name="MaAlbum" Parameter="maAlbum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenAlbum" Parameter="tenAlbum" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BAIHAT_add" Method="BAIHAT_add">
+    <Parameter Name="TenBaiHat" Parameter="tenBaiHat" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LinkBaiHat" Parameter="linkBaiHat" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="BAIHAT_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIHAT_delete" Method="BAIHAT_delete">
+    <Parameter Name="MaBaiHat" Parameter="maBaiHat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BAIHAT_get" Method="BAIHAT_get">
+    <Parameter Name="MaBaiHat" Parameter="maBaiHat" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BAIHAT_getResult">
+      <Column Name="MaBaiHat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenBaiHat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkBaiHat" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIHAT_getall" Method="BAIHAT_getall">
+    <ElementType Name="BAIHAT_getallResult">
+      <Column Name="MaBaiHat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenBaiHat" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkBaiHat" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIHAT_getpaged" Method="BAIHAT_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.BAIHAT_update" Method="BAIHAT_update">
+    <Parameter Name="MaBaiHat" Parameter="maBaiHat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenBaiHat" Parameter="tenBaiHat" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LinkBaiHat" Parameter="linkBaiHat" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BAIVIET_add" Method="BAIVIET_add">
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <Parameter Name="MaLoaiBaiViet" Parameter="maLoaiBaiViet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NgayDang" Parameter="ngayDang" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HinhAnh" Parameter="hinhAnh" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TomTat" Parameter="tomTat" Type="System.String" DbType="NText" />
+    <Parameter Name="MaNguoiDang" Parameter="maNguoiDang" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TinNoiBat" Parameter="tinNoiBat" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="BAIVIET_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_delete" Method="BAIVIET_delete">
+    <Parameter Name="MaBaiViet" Parameter="maBaiViet" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BAIVIET_get" Method="BAIVIET_get">
+    <Parameter Name="MaBaiViet" Parameter="maBaiViet" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BAIVIET_getResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_getall" Method="BAIVIET_getall">
+    <ElementType Name="BAIVIET_getallResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_getall_new" Method="BAIVIET_getall_new">
+    <ElementType Name="BAIVIET_getall_newResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_getpaged" Method="BAIVIET_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.BAIVIET_LayBaiVietMoiNhat" Method="BAIVIET_LayBaiVietMoiNhat">
+    <ElementType Name="BAIVIET_LayBaiVietMoiNhatResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_LayDSBaiVietTheoChuyenMuc" Method="BAIVIET_LayDSBaiVietTheoChuyenMuc">
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BAIVIET_LayDSBaiVietTheoChuyenMucResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_LayTopBaiVietMoiNhatTheoChuyenMuc" Method="BAIVIET_LayTopBaiVietMoiNhatTheoChuyenMuc">
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BAIVIET_LayTopBaiVietMoiNhatTheoChuyenMucResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_TimKiemTheoLoaiBaiViet" Method="BAIVIET_TimKiemTheoLoaiBaiViet">
+    <Parameter Name="MaLoaiBaiViet" Parameter="maLoaiBaiViet" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BAIVIET_TimKiemTheoLoaiBaiVietResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BAIVIET_update" Method="BAIVIET_update">
+    <Parameter Name="MaBaiViet" Parameter="maBaiViet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <Parameter Name="MaLoaiBaiViet" Parameter="maLoaiBaiViet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NgayDang" Parameter="ngayDang" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CapNhat" Parameter="capNhat" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HinhAnh" Parameter="hinhAnh" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TomTat" Parameter="tomTat" Type="System.String" DbType="NText" />
+    <Parameter Name="TinNoiBat" Parameter="tinNoiBat" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_add" Method="CAUHOIKHAOSAT_add">
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="BiKhoa" Parameter="biKhoa" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="CAUHOIKHAOSAT_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_cauHoiKhongKhoa" Method="CAUHOIKHAOSAT_cauHoiKhongKhoa">
+    <ElementType Name="CAUHOIKHAOSAT_cauHoiKhongKhoaResult">
+      <Column Name="MaCauHoiKhaoSat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BiKhoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_delete" Method="CAUHOIKHAOSAT_delete">
+    <Parameter Name="MaCauHoiKhaoSat" Parameter="maCauHoiKhaoSat" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_get" Method="CAUHOIKHAOSAT_get">
+    <Parameter Name="MaCauHoiKhaoSat" Parameter="maCauHoiKhaoSat" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CAUHOIKHAOSAT_getResult">
+      <Column Name="MaCauHoiKhaoSat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BiKhoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_getall" Method="CAUHOIKHAOSAT_getall">
+    <ElementType Name="CAUHOIKHAOSAT_getallResult">
+      <Column Name="MaCauHoiKhaoSat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BiKhoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_getpaged" Method="CAUHOIKHAOSAT_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.CAUHOIKHAOSAT_update" Method="CAUHOIKHAOSAT_update">
+    <Parameter Name="MaCauHoiKhaoSat" Parameter="maCauHoiKhaoSat" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="BiKhoa" Parameter="biKhoa" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CHUYENMUC_add" Method="CHUYENMUC_add">
+    <Parameter Name="TenChuyenMuc" Parameter="tenChuyenMuc" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="CHUYENMUC_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CHUYENMUC_delete" Method="CHUYENMUC_delete">
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CHUYENMUC_get" Method="CHUYENMUC_get">
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CHUYENMUC_getResult">
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CHUYENMUC_getall" Method="CHUYENMUC_getall">
+    <ElementType Name="CHUYENMUC_getallResult">
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CHUYENMUC_getpaged" Method="CHUYENMUC_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.CHUYENMUC_update" Method="CHUYENMUC_update">
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenChuyenMuc" Parameter="tenChuyenMuc" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_add" Method="DANGKYHOATDONG_add">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_delete" Method="DANGKYHOATDONG_delete">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_get" Method="DANGKYHOATDONG_get">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DANGKYHOATDONG_getResult">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_get_MaHoatDong" Method="DANGKYHOATDONG_get_MaHoatDong">
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DANGKYHOATDONG_get_MaHoatDongResult">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_getall" Method="DANGKYHOATDONG_getall">
+    <ElementType Name="DANGKYHOATDONG_getallResult">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_getpaged" Method="DANGKYHOATDONG_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_selectbySinhVien" Method="DANGKYHOATDONG_selectbySinhVien">
+    <Parameter Name="maSV" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DANGKYHOATDONG_selectbySinhVienResult">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_update" Method="DANGKYHOATDONG_update">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DANGKYHOATDONG_xoa" Method="DANGKYHOATDONG_xoa">
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_add" Method="DANGKYMUONPHONG_add">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NgayDangKy" Parameter="ngayDangKy" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="NgayMuon" Parameter="ngayMuon" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="SoLuong" Parameter="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MucDich" Parameter="mucDich" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DonViMuon" Parameter="donViMuon" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Phong" Parameter="phong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Tu" Parameter="tu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Den" Parameter="den" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KetQua" Parameter="ketQua" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="DANGKYMUONPHONG_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_delete" Method="DANGKYMUONPHONG_delete">
+    <Parameter Name="MaDangKy" Parameter="maDangKy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_get" Method="DANGKYMUONPHONG_get">
+    <Parameter Name="MaDangKy" Parameter="maDangKy" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DANGKYMUONPHONG_getResult">
+      <Column Name="MaDangKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySuDung" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MucDich" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DonViMuon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KQPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KetQua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_getall" Method="DANGKYMUONPHONG_getall">
+    <ElementType Name="DANGKYMUONPHONG_getallResult">
+      <Column Name="MaDangKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySuDung" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MucDich" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DonViMuon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KQPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KetQua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_getallwithNameUser" Method="DANGKYMUONPHONG_getallwithNameUser">
+    <ElementType Name="DANGKYMUONPHONG_getallwithNameUserResult">
+      <Column Name="MaDangKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySuDung" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MucDich" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DonViMuon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KQPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KetQua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaNguoiDung1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="MaVaiTro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_getbydate" Method="DANGKYMUONPHONG_getbydate">
+    <Parameter Name="NgayXoa" Parameter="ngayXoa" Type="System.DateTime" DbType="DateTime" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_getpaged" Method="DANGKYMUONPHONG_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_selectBySinhVien" Method="DANGKYMUONPHONG_selectBySinhVien">
+    <Parameter Name="maSV" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DANGKYMUONPHONG_selectBySinhVienResult">
+      <Column Name="MaDangKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySuDung" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TGBatDau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MucDich" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DonViMuon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KQPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="KetQua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DANGKYMUONPHONG_update" Method="DANGKYMUONPHONG_update">
+    <Parameter Name="MaDangKy" Parameter="maDangKy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NgayDangKy" Parameter="ngayDangKy" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="NgayMuon" Parameter="ngayMuon" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="SoLuong" Parameter="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MucDich" Parameter="mucDich" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DonViMuon" Parameter="donViMuon" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Phong" Parameter="phong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Tu" Parameter="tu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Den" Parameter="den" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="KetQua" Parameter="ketQua" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_add" Method="DAPANKHAOSAT_add">
+    <Parameter Name="MaCauHoi" Parameter="maCauHoi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="DAPANKHAOSAT_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_delete" Method="DAPANKHAOSAT_delete">
+    <Parameter Name="MaDapAn" Parameter="maDapAn" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_get" Method="DAPANKHAOSAT_get">
+    <Parameter Name="MaDapAn" Parameter="maDapAn" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DAPANKHAOSAT_getResult">
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_getall" Method="DAPANKHAOSAT_getall">
+    <ElementType Name="DAPANKHAOSAT_getallResult">
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_getpaged" Method="DAPANKHAOSAT_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_layDapAnTheoMaCauHoi" Method="DAPANKHAOSAT_layDapAnTheoMaCauHoi">
+    <Parameter Name="MaCauHoi" Parameter="maCauHoi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DAPANKHAOSAT_layDapAnTheoMaCauHoiResult">
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DAPANKHAOSAT_update" Method="DAPANKHAOSAT_update">
+    <Parameter Name="MaDapAn" Parameter="maDapAn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MaCauHoi" Parameter="maCauHoi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GIOITHIEU_add" Method="GIOITHIEU_add">
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <ElementType Name="GIOITHIEU_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GIOITHIEU_delete" Method="GIOITHIEU_delete">
+    <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GIOITHIEU_get" Method="GIOITHIEU_get">
+    <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GIOITHIEU_getResult">
+      <Column Name="MaBai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GIOITHIEU_getall" Method="GIOITHIEU_getall">
+    <ElementType Name="GIOITHIEU_getallResult">
+      <Column Name="MaBai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GIOITHIEU_getpaged" Method="GIOITHIEU_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.GIOITHIEU_update" Method="GIOITHIEU_update">
+    <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HETHONGTOCHUC_add" Method="HETHONGTOCHUC_add">
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <ElementType Name="HETHONGTOCHUC_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HETHONGTOCHUC_delete" Method="HETHONGTOCHUC_delete">
+    <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HETHONGTOCHUC_get" Method="HETHONGTOCHUC_get">
+    <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="HETHONGTOCHUC_getResult">
+      <Column Name="MaBai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HETHONGTOCHUC_getall" Method="HETHONGTOCHUC_getall">
+    <ElementType Name="HETHONGTOCHUC_getallResult">
+      <Column Name="MaBai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HETHONGTOCHUC_getpaged" Method="HETHONGTOCHUC_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.HETHONGTOCHUC_update" Method="HETHONGTOCHUC_update">
+    <Parameter Name="MaBai" Parameter="maBai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HINHANH_add" Method="HINHANH_add">
+    <Parameter Name="DuongDan" Parameter="duongDan" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaAlbum" Parameter="maAlbum" Type="System.Int32" DbType="Int" />
+    <ElementType Name="HINHANH_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HINHANH_delete" Method="HINHANH_delete">
+    <Parameter Name="MaHinhAnh" Parameter="maHinhAnh" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HINHANH_get" Method="HINHANH_get">
+    <Parameter Name="MaHinhAnh" Parameter="maHinhAnh" Type="System.Int32" DbType="Int" />
+    <ElementType Name="HINHANH_getResult">
+      <Column Name="MaHinhAnh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaAlbum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HINHANH_getall" Method="HINHANH_getall">
+    <ElementType Name="HINHANH_getallResult">
+      <Column Name="MaHinhAnh" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaAlbum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HINHANH_getpaged" Method="HINHANH_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.HINHANH_update" Method="HINHANH_update">
+    <Parameter Name="MaHinhAnh" Parameter="maHinhAnh" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DuongDan" Parameter="duongDan" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaAlbum" Parameter="maAlbum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HOATDONG_add" Method="HOATDONG_add">
+    <Parameter Name="TenHoatDong" Parameter="tenHoatDong" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NgayDienRa" Parameter="ngayDienRa" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ThoiGianBatDauDangKy" Parameter="thoiGianBatDauDangKy" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ThoiGianKetThucDangKy" Parameter="thoiGianKetThucDangKy" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HinhAnh" Parameter="hinhAnh" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="HOATDONG_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HOATDONG_delete" Method="HOATDONG_delete">
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.HOATDONG_get" Method="HOATDONG_get">
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="HOATDONG_getResult">
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDienRa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianBatDauDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThoiGianKetThucDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HOATDONG_getall" Method="HOATDONG_getall">
+    <ElementType Name="HOATDONG_getallResult">
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDienRa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianBatDauDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThoiGianKetThucDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HOATDONG_GetByLoai" Method="HOATDONG_GetByLoai">
+    <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="HOATDONG_GetByLoaiResult">
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDienRa" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianBatDauDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ThoiGianKetThucDangKy" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HOATDONG_getpaged" Method="HOATDONG_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.HOATDONG_update" Method="HOATDONG_update">
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenHoatDong" Parameter="tenHoatDong" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NgayDienRa" Parameter="ngayDienRa" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ThoiGianBatDauDangKy" Parameter="thoiGianBatDauDangKy" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ThoiGianKetThucDangKy" Parameter="thoiGianKetThucDangKy" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="HinhAnh" Parameter="hinhAnh" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KHAOSAT_add" Method="KHAOSAT_add">
+    <Parameter Name="MaDapAn" Parameter="maDapAn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="YKienKhac" Parameter="yKienKhac" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KHAOSAT_delete" Method="KHAOSAT_delete">
+    <Parameter Name="MaYKKS" Parameter="maYKKS" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.KHAOSAT_get" Method="KHAOSAT_get">
+    <Parameter Name="MaYKKS" Parameter="maYKKS" Type="System.Int32" DbType="Int" />
+    <ElementType Name="KHAOSAT_getResult">
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YKienKhac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.KHAOSAT_getall" Method="KHAOSAT_getall">
+    <ElementType Name="KHAOSAT_getallResult">
+      <Column Name="MaYKKS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaDapAn" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YKienKhac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.KHAOSAT_getpaged" Method="KHAOSAT_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.KHAOSAT_update" Method="KHAOSAT_update">
+    <Parameter Name="MaDapAn" Parameter="maDapAn" Type="System.Int32" DbType="Int" />
+    <Parameter Name="YKienKhac" Parameter="yKienKhac" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="MaYKKS" Parameter="maYKKS" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_add" Method="LOAIBAIVIET_add">
+    <Parameter Name="TenLoaiBaiViet" Parameter="tenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LOAIBAIVIET_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_delete" Method="LOAIBAIVIET_delete">
+    <Parameter Name="MaLoaiBaiViet" Parameter="maLoaiBaiViet" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_get" Method="LOAIBAIVIET_get">
+    <Parameter Name="MaLoaiBaiViet" Parameter="maLoaiBaiViet" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LOAIBAIVIET_getResult">
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_getall" Method="LOAIBAIVIET_getall">
+    <ElementType Name="LOAIBAIVIET_getallResult">
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_getall_chitiet" Method="LOAIBAIVIET_getall_chitiet">
+    <ElementType Name="LOAIBAIVIET_getall_chitietResult">
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TenChuyenMuc" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_getpaged" Method="LOAIBAIVIET_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_TimKiemTheoChuyenMuc" Method="LOAIBAIVIET_TimKiemTheoChuyenMuc">
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LOAIBAIVIET_TimKiemTheoChuyenMucResult">
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaChuyenMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIBAIVIET_update" Method="LOAIBAIVIET_update">
+    <Parameter Name="MaLoaiBaiViet" Parameter="maLoaiBaiViet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenLoaiBaiViet" Parameter="tenLoaiBaiViet" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaChuyenMuc" Parameter="maChuyenMuc" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOAIHOATDONG_add" Method="LOAIHOATDONG_add">
+    <Parameter Name="TenLoaiHoatDong" Parameter="tenLoaiHoatDong" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="LOAIHOATDONG_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIHOATDONG_delete" Method="LOAIHOATDONG_delete">
+    <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOAIHOATDONG_get" Method="LOAIHOATDONG_get">
+    <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LOAIHOATDONG_getResult">
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIHOATDONG_getall" Method="LOAIHOATDONG_getall">
+    <ElementType Name="LOAIHOATDONG_getallResult">
+      <Column Name="MaLoaiHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIHOATDONG_getpaged" Method="LOAIHOATDONG_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.LOAIHOATDONG_update" Method="LOAIHOATDONG_update">
+    <Parameter Name="MaLoaiHoatDong" Parameter="maLoaiHoatDong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenLoaiHoatDong" Parameter="tenLoaiHoatDong" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOAIVAITRO_add" Method="LOAIVAITRO_add">
+    <Parameter Name="TenLoaiVaiTro" Parameter="tenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="LOAIVAITRO_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIVAITRO_delete" Method="LOAIVAITRO_delete">
+    <Parameter Name="MaLoaiVaiTro" Parameter="maLoaiVaiTro" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LOAIVAITRO_get" Method="LOAIVAITRO_get">
+    <Parameter Name="MaLoaiVaiTro" Parameter="maLoaiVaiTro" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LOAIVAITRO_getResult">
+      <Column Name="MaLoaiVaiTro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIVAITRO_getall" Method="LOAIVAITRO_getall">
+    <ElementType Name="LOAIVAITRO_getallResult">
+      <Column Name="MaLoaiVaiTro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOAIVAITRO_getpaged" Method="LOAIVAITRO_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.LOAIVAITRO_update" Method="LOAIVAITRO_update">
+    <Parameter Name="MaLoaiVaiTro" Parameter="maLoaiVaiTro" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenLoaiVaiTro" Parameter="tenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_add" Method="NGUOIDUNG_add">
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NChar(50)" />
+    <Parameter Name="HoTen" Parameter="hoTen" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="MaVaiTro" Parameter="maVaiTro" Type="System.Int32" DbType="Int" />
+    <ElementType Name="NGUOIDUNG_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_DANGKYMUONPHONG_layUsernameTheoMaNguoiDung" Method="NGUOIDUNG_DANGKYMUONPHONG_layUsernameTheoMaNguoiDung">
+    <Parameter Name="Manguoidung" Parameter="manguoidung" Type="System.Int32" DbType="Int" />
+    <ElementType Name="NGUOIDUNG_DANGKYMUONPHONG_layUsernameTheoMaNguoiDungResult">
+      <Column Name="MaDangKy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySuDung" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDangKy" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MucDich" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DonViMuon" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KQPhong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TGBatDau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TGKetThuc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="KetQua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_delete" Method="NGUOIDUNG_delete">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_get" Method="NGUOIDUNG_get">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <ElementType Name="NGUOIDUNG_getResult">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="MaVaiTro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_getall" Method="NGUOIDUNG_getall">
+    <ElementType Name="NGUOIDUNG_getallResult">
+      <Column Name="MaNguoiDung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="MaVaiTro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenLoaiVaiTro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_getpaged" Method="NGUOIDUNG_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.NGUOIDUNG_update" Method="NGUOIDUNG_update">
+    <Parameter Name="MaNguoiDung" Parameter="maNguoiDung" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NChar(50)" />
+    <Parameter Name="HoTen" Parameter="hoTen" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="MaVaiTro" Parameter="maVaiTro" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_add" Method="TAPTINBAIVIET_add">
+    <Parameter Name="TenTapTin" Parameter="tenTapTin" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DuongDan" Parameter="duongDan" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaBaiViet" Parameter="maBaiViet" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TAPTINBAIVIET_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_delete" Method="TAPTINBAIVIET_delete">
+    <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_get" Method="TAPTINBAIVIET_get">
+    <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TAPTINBAIVIET_getResult">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_getall" Method="TAPTINBAIVIET_getall">
+    <ElementType Name="TAPTINBAIVIET_getallResult">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_getLichLamViec" Method="TAPTINBAIVIET_getLichLamViec">
+    <ElementType Name="TAPTINBAIVIET_getLichLamViecResult">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaBaiViet1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaLoaiBaiViet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HinhAnh" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TomTat" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaNguoiDang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinNoiBat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_getmabaivietlichlamviec" Method="TAPTINBAIVIET_getmabaivietlichlamviec">
+    <ElementType Name="TAPTINBAIVIET_getmabaivietlichlamviecResult">
+      <Column Name="MaBaiViet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_getpaged" Method="TAPTINBAIVIET_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.TAPTINBAIVIET_update" Method="TAPTINBAIVIET_update">
+    <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenTapTin" Parameter="tenTapTin" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DuongDan" Parameter="duongDan" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaBaiViet" Parameter="maBaiViet" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TAPTINTHONGBAO_add" Method="TAPTINTHONGBAO_add">
+    <Parameter Name="TenTapTin" Parameter="tenTapTin" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DuongDan" Parameter="duongDan" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaThongBao" Parameter="maThongBao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TAPTINTHONGBAO_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINTHONGBAO_delete" Method="TAPTINTHONGBAO_delete">
+    <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TAPTINTHONGBAO_get" Method="TAPTINTHONGBAO_get">
+    <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TAPTINTHONGBAO_getResult">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINTHONGBAO_getall" Method="TAPTINTHONGBAO_getall">
+    <ElementType Name="TAPTINTHONGBAO_getallResult">
+      <Column Name="MaTapTin" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenTapTin" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TAPTINTHONGBAO_getpaged" Method="TAPTINTHONGBAO_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.TAPTINTHONGBAO_update" Method="TAPTINTHONGBAO_update">
+    <Parameter Name="MaTapTin" Parameter="maTapTin" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TenTapTin" Parameter="tenTapTin" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="DuongDan" Parameter="duongDan" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MaThongBao" Parameter="maThongBao" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.THONGBAO_add" Method="THONGBAO_add">
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NgayDang" Parameter="ngayDang" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="THONGBAO_addResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.THONGBAO_delete" Method="THONGBAO_delete">
+    <Parameter Name="MaThongBao" Parameter="maThongBao" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.THONGBAO_get" Method="THONGBAO_get">
+    <Parameter Name="MaThongBao" Parameter="maThongBao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="THONGBAO_getResult">
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.THONGBAO_getall" Method="THONGBAO_getall">
+    <ElementType Name="THONGBAO_getallResult">
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.THONGBAO_getall_new" Method="THONGBAO_getall_new">
+    <ElementType Name="THONGBAO_getall_newResult">
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TenHoatDong" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.THONGBAO_getpaged" Method="THONGBAO_getpaged">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(4000)" />
+    <Parameter Name="OrderBy" Parameter="orderBy" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageSize" Parameter="pageSize" Type="System.Int32" DbType="Int" />
+  </Function>
+  <Function Name="dbo.THONGBAO_LayThongBaoTheoMaHoatDong" Method="THONGBAO_LayThongBaoTheoMaHoatDong">
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="THONGBAO_LayThongBaoTheoMaHoatDongResult">
+      <Column Name="MaThongBao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TieuDe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NoiDung" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MaHoatDong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayDang" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.THONGBAO_update" Method="THONGBAO_update">
+    <Parameter Name="MaThongBao" Parameter="maThongBao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TieuDe" Parameter="tieuDe" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NoiDung" Parameter="noiDung" Type="System.String" DbType="NText" />
+    <Parameter Name="MaHoatDong" Parameter="maHoatDong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NgayDang" Parameter="ngayDang" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

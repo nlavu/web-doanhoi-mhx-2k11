@@ -1,0 +1,72 @@
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DAOAuction.dll.config
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DAOAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DAOAuction.pdb
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DTOAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DTOAuction.pdb
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\obj\Debug\DAOAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\DAOAuction\obj\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DAOAuction.dll.config
+D:\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DTOAuction.dll
+D:\WebDoanHoi_vpm_1708\DAOAuction\bin\Debug\DTOAuction.pdb
+D:\WebDoanHoi_vpm_1708\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_1708\DAOAuction\obj\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_1708\DAOAuction\obj\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_2208\DAOAuction\bin\Debug\DAOAuction.dll.config
+D:\WebDoanHoi_vpm_2208\DAOAuction\bin\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_2208\DAOAuction\bin\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_2208\DAOAuction\bin\Debug\DTOAuction.dll
+D:\WebDoanHoi_vpm_2208\DAOAuction\bin\Debug\DTOAuction.pdb
+D:\WebDoanHoi_vpm_2208\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_2208\DAOAuction\obj\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_2208\DAOAuction\obj\Debug\DAOAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll.config
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\bin\Debug\DAOAuction.dll.config
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\bin\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\bin\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\bin\Debug\DTOAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\bin\Debug\DTOAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\obj\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\DAOAuction\obj\Debug\DAOAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll.config
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll.config
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.pdb
+E:\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll.config
+E:\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll
+E:\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.pdb
+E:\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.dll
+E:\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.pdb
+E:\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+E:\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.dll
+E:\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll.config
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DAOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\DAOAuction\obj\Debug\DAOAuction.pdb
