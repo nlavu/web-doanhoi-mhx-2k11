@@ -1,0 +1,71 @@
+public static boolean flag = false;
+
+    public void playSound(String str)
+    {
+        HttpConnection cn = null;
+        InputStream in = null;
+        ByteArrayOutputStream bout = null;
+        try
+        {
+            // OutputStream file = getClass().createResourceAsStream("file.mp3");            
+            java.io.OutputStream os = null;
+            //c = javax.microedition.io.Connector.open("file.mp3");
+            //javax.microedition.io.file.FileConnection fc = (javax.microedition.io.file.FileConnection) c;
+            FileConnection fc = (FileConnection)Connector.open("file:/sound.mp3");
+            if (!fc.exists()) {
+                fc.create();
+            } else {
+                fc.truncate(0);
+            }
+            os = fc.openOutputStream();
+
+            String connStr = "http://translate.google.com/translate_tts?tl=en&q=" + str;
+            cn = (HttpConnection) Connector.open(connStr);
+
+            //ContentConnection connect = (ContentConnection) Connector.open(chuoi);
+            cn.setRequestProperty("Connection", "close");
+            in = cn.openInputStream();
+            int b;
+            while ((b = in.read()) != -1) {
+                //bout.write(b);
+                if (b > 0) {
+                    os.write(b);
+                }
+            }
+            if (cn != null) {
+                cn.close();
+                cn = null;
+            }
+            if (in != null) {
+                in.close();
+                in = null;
+            }
+            if (bout != null) {
+                bout.close();
+                bout = null;
+            }
+            if (os != null) {
+                os.close();
+                os = null;
+            }
+
+
+        } catch (Exception ex) {
+        }
+        Player player = null;
+        try {
+            InputStream is = getClass().getResourceAsStream("file:/sound.mp3");
+          //  InputStream is = bout.toByteArray();
+            player = Manager.createPlayer(is, "audio/mpeg");
+            player.realize();
+            VolumeControl vl = null;
+            vl = (VolumeControl) player.getControl("VolumeControl");
+            if (vl != null) {
+                vl.setLevel(100);
+            }
+            player.prefetch();
+            player.start();
+        } catch (Exception ex) {
+            displayMessage(ex.getMessage(), "Loi");
+        }
+    }

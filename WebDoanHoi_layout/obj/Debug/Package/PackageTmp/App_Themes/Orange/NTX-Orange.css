@@ -1,0 +1,339 @@
+
+/* CSS Document */
+/*
+	Nguyen Thanh Xuan
+*/
+body{
+	background-color:#0C8DBE;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#F5DE42;
+}
+#mainPage {
+	width:1000px;
+	margin-top:0px;
+	margin-right:auto;
+	margin-bottom:0px;
+	margin-left:auto;
+	text-align:left;
+	padding-top:0px;
+	padding-bottom:20px;
+	padding-left:2px;
+	padding-right:2px;
+	height:auto;
+}
+/*Begin header*/
+#header{
+	width:1000px;
+	height:auto;
+	float:left;	
+}
+#header-flash{
+	width:1000px;
+	height:auto;
+}
+.header-menu{
+	width:1000px;
+	height:50px;
+}
+#header-submenu{
+	width:1000px;
+	height:30px;
+	background-color:#FFF;
+	margin-top:5px;
+	padding-top:5px;
+	color:#F60;
+}
+#header-submenu select{
+	color:#F60;
+}
+/*End header*/
+#content
+{
+	margin-top: 5px;
+	width:1000px;
+	height:auto;
+	float:left;
+}
+#posts
+{
+	width: 578px;
+	height:auto;
+	float:left;
+}
+#sidebar-left, #sidebar-right
+{
+	float: left;
+	width: 208px;
+	margin-left: 2px;
+	margin-bottom: 2px;
+}
+#sidebar
+{
+	width: 420px;
+	margin-left: 2px;
+	height:auto;
+	float:left;
+}
+/*Begin Sortable draggable*/
+.column {
+	width: 574px;
+	float: left;
+}
+.portlet {
+	margin-bottom:5px;
+	width: 574px;
+	height:auto;
+	float:left;
+}
+.portlet-header { 
+	width: 574px;
+	padding-bottom: 4px;
+	line-height:25px;
+}
+.portlet-header:hover{
+	cursor:move;
+}
+.portlet-header .ui-icon:hover{
+	cursor:pointer;
+}
+.portlet-header .ui-icon { float: right; }
+.portlet-content { 
+	width: 554px;
+	height:auto;
+	padding: 10px; 
+	float:left;
+	display:inline-block;
+}
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 250px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+ /*End Sortable draggable*/
+ 
+ /*Begin Bai viet noi bat*/
+#BVNoiBatDiv{
+ 	width: 554px;
+	height:auto;
+	background-color:#FFF;
+	padding:10px;
+	margin-bottom:10px;
+	float:left;
+}
+#imgBVNoiBat{
+	width:514px;
+    padding-left:20px;
+	padding-right:20px;
+	text-align:center;
+	margin-bottom:10px;
+	float:left;
+}
+#BVNoiBatNhatDiv{
+	width:554px;
+	height:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:17px;
+	color:#F60;
+	font-weight:bold;
+	font-weight:normal;
+	float:left;
+	margin-bottom:10px;
+}
+
+#BVNoiBatNhatTitle a{
+	width:549px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+	color:#F60;
+	font-weight:bold;
+	padding-left:5px;
+	margin-bottom:5px;
+}
+#BVNoiBatNhatTitle a:hover,#imgBVNoiBat a:hover,.DSBVNoiBatDiv-title a span:hover{
+	cursor:pointer;
+	color:#06C;
+}
+#BVNoiBatNhatContent{
+	padding-left:5px;
+	padding-right:5px;
+	width:544px;
+	height:auto;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:13px;
+	line-height:17px;
+	text-align:justify;
+	color:#000;
+}
+#DSBVNoiBatDiv{
+	width:554px;
+	padding-bottom:10px;
+	height:auto;
+	float:left;
+}
+#BVNoiBatDiv p a
+{
+    color:#06C; 
+}
+#BVNoiBatDiv p a:hover
+{
+    cursor:pointer;
+	color:#F60;
+}
+.DSBVNoiBatDiv-area{
+	width:125px;
+	float:left;	
+	margin:5px;
+}
+.imgDSBVNoiBatDiv{
+	width:125px;
+	max-height:150px;
+}
+.DSBVNoiBatDiv-title a span{
+	width:125px;
+	height:auto;
+	text-align:justify;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#F60;
+}
+.XemTiep
+{
+	color:Orange;
+	font-style:italic;
+}
+ /*End Bai viet noi bat*/
+ 
+ /*Begin Bai viet*/
+.imgBaiViet{
+	width:150px;	
+	float:left;
+}
+.BaiViet{
+	width: 350px;
+	float:left;
+	height:auto;
+	padding-left:10px;
+	
+}
+a.BaiVietTitle span{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+	color:#F60;
+	font-weight:bold;
+}
+a.BaiVietTitle span:hover,a.XemTiep i:hover,.RelatedBaiViet li a:hover{
+	cursor:pointer;
+	color:#06C;
+}
+.BaiVietContent{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:13px;
+	line-height:17px;
+	text-align:justify;
+}
+a.XemTiep i{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#F60;
+}
+.RelatedBaiViet{
+	width:544px;
+	float:left;
+	margin-left:10px;
+}
+.RelatedBaiViet li a{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color:#F60;
+}
+.tieudeTinNoiBat
+{
+	font:Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#FFF;
+}
+
+.hinhdaidienTinNoiBat
+{
+	
+
+}
+ /*End Bai Viet*/
+ 
+ /*Begin Module*/ 
+.module{
+	width: 206px;
+	height:auto;
+	float:left;
+}
+.post-title
+{
+	margin: 2px;
+	width:196px;	
+	padding:4px;	
+}
+.post-content p{
+	padding:0px;
+	margin:2px;
+}
+.post-content p a{
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	line-height:17px;
+	text-align:justify;
+	text-decoration:none;
+	color:#000;
+}
+.post-content p a:hover
+{
+	cursor:pointer;
+	color:#06C;
+}
+.moduleHeader{
+	width:195px;
+	font-size: 14px;
+	line-height:25px;
+ }
+ #slideshow
+{
+	width: 418px;
+	height:auto;
+}
+#baihat
+{
+	width: 418px;
+	height:auto;
+}
+.post-title-1
+{
+	margin: 2px;
+	width:400px;	
+	padding:4px;
+	float:left;	
+}
+ .moduleHeader-1{
+	width:400px;
+	font-size: 14px;
+	line-height:25px;
+ }
+ /*End module*/
+ 
+ /*Begin Footer*/ 
+#footer
+{
+	height:125px;
+	width:1000px;
+	margin-top:10px;
+	float:left;
+}
+
+#footer p
+{
+	font-size: 12px;
+	padding-top: 15px;
+	text-align: center;
+}
+#footer-design{
+	width:1000px;
+}
+
+ /*End Footer*/
+ 

@@ -1,0 +1,115 @@
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.cs
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.designer.cs
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\images\ico\favicon_002.ico
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.pdb
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\FredCK.FCKeditorV2.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.AccessControl.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Apps.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Client.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Extensions.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.GoogleBase.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Photos.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.pdb
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.pdb
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.pdb
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\ResolveAssemblyReference.cache
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.csproj.ResolveComReference.cache
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.dll
+E:\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.cs
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.designer.cs
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\images\ico\favicon_002.ico
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\FredCK.FCKeditorV2.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.AccessControl.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Apps.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Client.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Extensions.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.GoogleBase.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Photos.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.csproj.ResolveComReference.cache
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.pdb
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.cs
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.designer.cs
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\images\ico\favicon_002.ico
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.pdb
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\FredCK.FCKeditorV2.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.AccessControl.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Apps.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Client.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Extensions.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.GoogleBase.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Photos.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.pdb
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.pdb
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.pdb
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.csproj.ResolveComReference.cache
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.dll
+C:\Users\Anh Vu\Desktop\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.cs
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.designer.cs
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\images\ico\favicon_002.ico
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\WebDoanHoi_layout.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\FredCK.FCKeditorV2.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.AccessControl.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Apps.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Client.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Extensions.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.GoogleBase.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\Google.GData.Photos.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\BUSAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DAOAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\bin\DTOAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\ResolveAssemblyReference.cache
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.csproj.ResolveComReference.cache
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.cs
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.designer.cs
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\images\ico\favicon_002.ico
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\WebDoanHoi_layout.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\WebDoanHoi_layout.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\BUSAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\DAOAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\DTOAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\FredCK.FCKeditorV2.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\Google.GData.AccessControl.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\Google.GData.Apps.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\Google.GData.Client.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\Google.GData.Extensions.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\Google.GData.GoogleBase.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\Google.GData.Photos.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\BUSAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\DAOAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\bin\DTOAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\obj\Debug\ResolveAssemblyReference.cache
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.csproj.ResolveComReference.cache
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_2k11\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.pdb

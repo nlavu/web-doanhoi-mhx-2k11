@@ -1,0 +1,233 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main_3col.master.cs"
+    Inherits="WebDoanHoi_layout.main_3col"%>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<%@ Register Src="~/wuc/header.ascx" TagName="header" TagPrefix="uc1" %>
+<%@ Register Src="../wuc/sidebar/sb_quangcao.ascx" TagName="sb_quangcao" TagPrefix="uc2" %>
+<%@ Register Src="../wuc/sidebar/sb_tinmoinhat.ascx" TagName="sb_tinmoinhat" TagPrefix="uc3" %>
+<%@ Register Src="../wuc/footer.ascx" TagName="footer" TagPrefix="uc4" %>
+<%@ Register Src="../wuc/sidebar/sb_baihat.ascx" TagName="sb_baihat" TagPrefix="uc5" %>
+<%@ Register Src="../wuc/sidebar/sb_hd_noibat.ascx" TagName="sb_hd_noibat" TagPrefix="uc6" %>
+<%@ Register Src="../wuc/sidebar/sb_danhgia.ascx" TagName="sb_danhgia" TagPrefix="uc7" %>
+<%@ Register Src="../wuc/sidebar/sb_khaosat.ascx" TagName="sb_khaosat" TagPrefix="uc8" %>
+<%@ Register Src="../wuc/sidebar/sb_hinhanh.ascx" TagName="sb_hinhanh" TagPrefix="uc9" %>
+<%@ Register Src="../wuc/sidebar/sb_dangnhap.ascx" TagName="sb_dangnhap" TagPrefix="uc10" %>
+<%@ Register Src="../wuc/sidebar/sb_banner.ascx" TagName="sb_banner" TagPrefix="uc12" %>
+<%@ Register Src="../wuc/wucDangNhap.ascx" TagName="wucDangNhap" TagPrefix="uc11" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Đoàn TNCS HCM - Hội SV trường ĐHKHTN</title>
+    <link href="../App_Themes/NTXuan_skin.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style-3-col.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Blue/NTX-Blue.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Blue/jquery/css/custom-theme/jquery-ui-1.8.5.custom.css" rel="stylesheet" type="text/css" />
+    <link href="../App_Themes/Blue/jquery/apycom/menu.css" rel="stylesheet" type="text/css" />
+    <link href="../css/blue/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../App_Themes/Blue/jquery/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../App_Themes/Blue/jquery/js/jquery-ui-1.8.5.custom.min.js"></script>
+    <script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
+    <script src="../App_Themes/Blue/jquery/apycom/menu.js" type="text/javascript"></script>
+    <script src="../js/MyCookie.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.tablesorter.pager.js"></script>
+    <script src="../js/plugins/docs.js" type="text/javascript"></script>
+    <script src="../js/plugins/chili-1.8b.js" type="text/javascript"></script>
+    <script src="../js/plugins/jquery.tablesorter.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+              $('.accordion .head').click(function () {
+                $(this).next().toggle('slow');
+                return false;
+            }).next().hide();
+            $(function () {
+            $('.bannerslideshow a:gt(0)').hide();
+            setInterval(function () {
+                $('.bannerslideshow a:first-child').hide()
+         .next('a').fadeIn("slow")
+         .end('a').appendTo('.bannerslideshow');
+            },
+      4000);
+        })
+            $('input:submit, input:button , input:reset').button();
+
+            //Màu skin
+            var mau = getCookie('skin');
+            if (mau == 'blue') {
+                skin_blue($('.skin_blue'));
+            } else if (mau == 'orange') {
+                skin_orange($('.skin_orange'));
+            }
+
+            //Bài hát page
+            $(".bh").click(function () {
+                parent = $(this).parents('.divbh');
+                obj = $(parent).find('.bhZing').toggle();
+            });
+            $('.bhZing').hide();
+
+            //DatePicker
+            $('.DateTimeMuonPhong').datepicker({
+                dateFormat: 'dd/mm/yy',
+                minDate:'+1d',
+            });
+            });
+            
+    </script>
+    <script type="text/javascript">
+           $(function () {
+               $(".dsBaiViet")
+.tablesorter({ widthFixed: true, widgets: ['zebra'] })
+.tablesorterPager({ container: $("#pager") });
+           }); </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".column").sortable({
+                connectWith: '.column',
+                sort: function (event, ui) {
+                    ui.item.fadeTo('fast', 0.8);
+                },
+                stop: function (event, ui) {
+                    ui.item.fadeTo('fast', 1);
+                }
+            });
+
+            $(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+			.find(".portlet-header")
+				.addClass("ui-state-default ui-corner-top")
+				.prepend('<span class="ui-icon ui-icon-minusthick"></span>')
+				.end()
+			.find(".portlet-content");
+
+            $(".portlet-header .ui-icon").click(function () {
+                $(this).toggleClass("ui-icon-minusthick").toggleClass("ui-icon-plusthick");
+                $(this).parents(".portlet:first").find(".portlet-content").slideToggle('slow');
+            });
+
+            $(".column").disableSelection();
+        });
+	</script>
+    <!--Design module & footer-->
+    <script type="text/javascript">
+        $(function () {
+            $(".post-title,.post-title-1,#footer,#BVNoiBatDiv,#header-submenu").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all");
+            $(".moduleHeader,.moduleHeader-1").addClass("ui-corner-all ui-state-default");
+            $("#footer-design").addClass("ui-corner-bottom ui-state-default");
+        });
+	</script>
+    <script>
+        function skin_blue(obj) {
+            if ($(obj).find('div').attr('class') == 'skin_blue_selected') {
+                return;
+            }
+            $(obj).find('div').attr('class', 'skin_blue_selected');
+            $('.skin_orange_selected').attr('class', '');
+            xulymau('blue');
+            setCookie('skin', 'blue', 365);
+        }
+        function skin_orange(obj) {
+            if ($(obj).find('div').attr('class') == 'skin_orange_selected') {
+                return;
+            }
+            $(obj).find('div').attr('class', 'skin_orange_selected');
+            $('.skin_blue_selected').attr('class', '');
+            xulymau('orange');
+            setCookie('skin', 'orange', 365);
+        }
+        function xulymau(mau) {
+            var mau1 = ''; //Mau set
+            var mau2 = ''; //Mau remove
+            if (mau == 'blue') {
+                mau1 = 'Blue';
+                mau2 = 'Orange';
+            } else {
+                mau2 = 'Blue';
+                mau1 = 'Orange';
+            }
+            var arrLink = document.getElementsByTagName('link');
+            for (var i = 0; i < arrLink.length; i++) {
+                var temp = $(arrLink[i]).attr('href');
+                if (temp.search('/' + mau2 + '/') > 0) {
+                    var patt = new RegExp(mau2, 'g');
+                    patt.compile(patt);
+                    temp = temp.replace(patt, mau1);
+                    $(arrLink[i]).attr('href', temp);
+                }
+            }
+        }
+	</script>
+    <style type="text/css">
+        .bannerslideshow {display:inherit; width:1000px; height:200px; margin-top:10px; margin-bottom:10px}
+        .bannerslideshow img {position:relative; top:0px; margin-left:auto; margin-right:auto; margin-bottom:auto
+                              ;magin-top:auto; width:1000px; height: 180px}
+    </style>   
+</head>
+<body style="background-image:url('upload/bg.gif')">
+    
+  <div id="mainPage">
+    <form runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
+        <div id="header" style="display:inline">
+            <uc1:header ID="header1" runat="server" />
+        </div>      
+
+        <!-- header end -->        
+        <div id="content">      
+            <div>
+                 <uc12:sb_banner Title="Banner" ID="sb_banner" runat="server" />
+            </div>
+            <div id="posts">
+                <asp:ContentPlaceHolder ID="cphPost" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- posts end -->
+            <div id="sidebar"> 
+                <div id="sidebar-left">  
+                    <div class="module">
+                        <uc3:sb_tinmoinhat Title="Tin mới nhất" ID="sb_tinmoinhat1" runat="server" />
+                    </div>
+                    <div class="module">
+	                    <uc6:sb_hd_noibat Title="Chánh Đức" ID="sb_hd_noibat1" runat="server" />
+                    </div>
+                    <div class="module" style="display:none">
+	                    <uc8:sb_khaosat Title="Ngô" ID="sb_khaosat1" runat="server"  />
+                    </div>
+                    <div class="module" style="display:none">
+	                    <uc7:sb_danhgia Title="^^" ID="sb_danhgia1" runat="server" style="display:none"/>
+                    </div>     
+                </div>
+                <!-- sidebar1 end -->
+                <div id="sidebar-right">
+                	<div class="module">
+	                    <uc11:wucDangNhap ID="wucDangNhap1" runat="server" />
+					</div>
+                    <div class="module">
+                    	<uc2:sb_quangcao ID="sb_quangcao1" runat="server" />
+                    </div>
+                </div>
+                <!-- sidebar2 end -->
+                <div id="slideshow">
+                    <uc9:sb_hinhanh ID="sb_hinhanh1" runat="server" />
+                </div>
+                <div id="baihat">
+                    <uc5:sb_baihat ID="sb_baihat1" runat="server" />
+                </div>
+            </div>
+            <!-- sidebar2 end -->
+        </div>
+        <!-- content end -->
+        <div id="footer">
+            <div id="divPageView" style="text-align:center">
+            Số lượt truy cập: 
+            <asp:Label ID="lblPageView" runat="server" Text="Page view number"></asp:Label>
+            </div>
+            
+            <uc4:footer ID="footer1" runat="server" />
+        </div>
+    
+        <!-- footer end -->      
+    </form>
+   </div>
+</body>
+</html>

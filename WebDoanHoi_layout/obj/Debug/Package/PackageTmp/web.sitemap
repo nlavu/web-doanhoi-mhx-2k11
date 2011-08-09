@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap enableLocalization="true" xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="Home"  description="Administration Home" >
+
+    <siteMapNode title="Trang Chủ"  url="~/Default.aspx" IconUrl="~/Administration/Common/ico-dashboard.png" description="Trang Chủ" />
+
+    <siteMapNode title="Đấu Giá" url="~/DauGia.aspx" IconUrl="~/Administration/Common/ico-catalog.png" description="Trang Đấu Giá" />
+
+    <siteMapNode title="Thanh Toán"  url="~/ThanhToan.aspx" IconUrl="~/Administration/Common/ico-dashboard.png" description="Thanh Toán" />
+
+    <siteMapNode title="Tìm Nâng Cao" url="~/TimNangCao.aspx" IconUrl="~/Administration/Common/ico-catalog.png" description="Tìm Nâng Cáo" />
+
+    <siteMapNode title="FAQ" url="~/FAQ.aspx" IconUrl="~/Administration/Common/ico-catalog.png" description="FAQ" />
+    
+    <siteMapNode title="Liên Hệ" url="~/LienHe.aspx" IconUrl="~/Administration/Common/ico-catalog.png" description="Liên Hệ" />
+
+  </siteMapNode>
+</siteMap>

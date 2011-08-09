@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QuangCao>
+  <QC>
+    <ImageLink>Uploads/HinhAnhQuangCao/qc1.jpg</ImageLink>
+    <URLLink>GioiThieu.aspx</URLLink>
+  </QC>
+  <QC>
+    <ImageLink>Uploads/HinhAnhQuangCao/alanta.jpg</ImageLink>
+    <URLLink>http://atlanta.edu.vn</URLLink>
+  </QC>
+</QuangCao>

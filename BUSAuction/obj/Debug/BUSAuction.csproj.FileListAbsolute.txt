@@ -1,0 +1,90 @@
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\BUSAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\BUSAuction.pdb
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DAOAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DTOAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DAOAuction.pdb
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DTOAuction.pdb
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\obj\Debug\BUSAuction.dll
+D:\MHX2010\WebDoanHoi_vpm_1708\BUSAuction\obj\Debug\BUSAuction.pdb
+D:\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\BUSAuction.dll
+D:\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\BUSAuction.pdb
+D:\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DTOAuction.dll
+D:\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_1708\BUSAuction\bin\Debug\DTOAuction.pdb
+D:\WebDoanHoi_vpm_1708\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_1708\BUSAuction\obj\Debug\BUSAuction.dll
+D:\WebDoanHoi_vpm_1708\BUSAuction\obj\Debug\BUSAuction.pdb
+D:\WebDoanHoi_vpm_2208\BUSAuction\bin\Debug\BUSAuction.dll
+D:\WebDoanHoi_vpm_2208\BUSAuction\bin\Debug\BUSAuction.pdb
+D:\WebDoanHoi_vpm_2208\BUSAuction\bin\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_2208\BUSAuction\bin\Debug\DTOAuction.dll
+D:\WebDoanHoi_vpm_2208\BUSAuction\bin\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_2208\BUSAuction\bin\Debug\DTOAuction.pdb
+D:\WebDoanHoi_vpm_2208\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_2208\BUSAuction\obj\Debug\BUSAuction.dll
+D:\WebDoanHoi_vpm_2208\BUSAuction\obj\Debug\BUSAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.pdb
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
+E:\00. DOAN - HOI\2009-2010\MHX 2010\project\03.Source code\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\bin\Debug\BUSAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\bin\Debug\BUSAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\bin\Debug\DAOAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\bin\Debug\DTOAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\bin\Debug\DAOAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\bin\Debug\DTOAuction.pdb
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\obj\Debug\BUSAuction.dll
+D:\WebDoanHoi_vpm_0109_fixed\BUSAuction\obj\Debug\BUSAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.pdb
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
+C:\Users\GIA HUY\Documents\Downloads\Compressed\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.pdb
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
+E:\01. DOAN - HOI\2009-2010\MHX 2010\WebDoanHoi_vpm_NTXuan03112010_20h\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb
+E:\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.dll
+E:\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.pdb
+E:\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.dll
+E:\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.dll
+E:\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.pdb
+E:\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.pdb
+E:\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+E:\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
+E:\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
+C:\Users\Anh Vu\Desktop\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\BUSAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DAOAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\bin\Debug\DTOAuction.pdb
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.dll
+D:\[1] The University Of Science\mhx 2k11\VPM MHX2011\WebDoanHoi_vpm_0109\BUSAuction\obj\Debug\BUSAuction.pdb

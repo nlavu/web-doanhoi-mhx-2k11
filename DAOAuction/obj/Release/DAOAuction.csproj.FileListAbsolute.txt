@@ -1,0 +1,8 @@
+D:\WebDoanHoi_vpm_0109\DAOAuction\bin\Release\DAOAuction.dll.config
+D:\WebDoanHoi_vpm_0109\DAOAuction\bin\Release\DAOAuction.dll
+D:\WebDoanHoi_vpm_0109\DAOAuction\bin\Release\DAOAuction.pdb
+D:\WebDoanHoi_vpm_0109\DAOAuction\bin\Release\DTOAuction.dll
+D:\WebDoanHoi_vpm_0109\DAOAuction\bin\Release\DTOAuction.pdb
+D:\WebDoanHoi_vpm_0109\DAOAuction\obj\Release\ResolveAssemblyReference.cache
+D:\WebDoanHoi_vpm_0109\DAOAuction\obj\Release\DAOAuction.dll
+D:\WebDoanHoi_vpm_0109\DAOAuction\obj\Release\DAOAuction.pdb

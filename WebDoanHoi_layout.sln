@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDoanHoi_layout", "WebDoanHoi_layout\WebDoanHoi_layout.csproj", "{4DAE4C89-4326-4B61-A746-055D8874D860}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUSAuction", "BUSAuction\BUSAuction.csproj", "{91126245-1172-4E15-A63F-C43B864957F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOAuction", "DTOAuction\DTOAuction.csproj", "{913DF7BB-A074-4EB6-9E33-4EBD5C6555BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOAuction", "DAOAuction\DAOAuction.csproj", "{55483179-5D42-4778-81F8-1B1A059B9812}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DAE4C89-4326-4B61-A746-055D8874D860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAE4C89-4326-4B61-A746-055D8874D860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAE4C89-4326-4B61-A746-055D8874D860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAE4C89-4326-4B61-A746-055D8874D860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91126245-1172-4E15-A63F-C43B864957F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91126245-1172-4E15-A63F-C43B864957F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91126245-1172-4E15-A63F-C43B864957F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91126245-1172-4E15-A63F-C43B864957F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913DF7BB-A074-4EB6-9E33-4EBD5C6555BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913DF7BB-A074-4EB6-9E33-4EBD5C6555BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913DF7BB-A074-4EB6-9E33-4EBD5C6555BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913DF7BB-A074-4EB6-9E33-4EBD5C6555BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55483179-5D42-4778-81F8-1B1A059B9812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55483179-5D42-4778-81F8-1B1A059B9812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55483179-5D42-4778-81F8-1B1A059B9812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55483179-5D42-4778-81F8-1B1A059B9812}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
