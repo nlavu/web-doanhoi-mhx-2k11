@@ -61,6 +61,7 @@
     <Compile Include="DAODangKyHoatDong.cs" />
     <Compile Include="DAODangKyMuonPhong.cs" />
     <Compile Include="DAODapAnKhaoSat.cs" />
+    <Compile Include="DAOFAQ.cs" />
     <Compile Include="DAOGioiThieu.cs" />
     <Compile Include="DAOGopY.cs" />
     <Compile Include="DAOHeThongToChuc.cs" />

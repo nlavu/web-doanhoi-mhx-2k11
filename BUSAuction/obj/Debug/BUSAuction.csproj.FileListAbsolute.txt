@@ -97,3 +97,12 @@ C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\bin\Debug\DTOAuctio
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\obj\Debug\BUSAuction.dll
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\BUSAuction\obj\Debug\BUSAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\bin\Debug\BUSAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\bin\Debug\BUSAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\bin\Debug\DAOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\bin\Debug\DTOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\bin\Debug\DAOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\obj\Debug\BUSAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\BUSAuction\obj\Debug\BUSAuction.pdb

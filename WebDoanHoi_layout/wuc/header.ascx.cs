@@ -26,6 +26,8 @@ namespace WebDoanHoi_layout.wuc
                 strMenu += strMenuChuyenMuc();
                 strMenu += strMenuHoTroSinhVien();
                 strMenu += strMenuTienIch();
+                strMenu += strMenuFAQ();
+                strMenu += strMenuGopY();
                 strMenu += "</ul>";
                 lblMenu.Text = strMenu;
             }
@@ -197,5 +199,26 @@ namespace WebDoanHoi_layout.wuc
             hp.Target = "_blank";
             Response.Redirect(link);
         }
+
+
+        // Hứa Minh Quang:
+        public string strMenuFAQ()
+        {
+            string strMenu = "";
+            strMenu += "<li>";
+            strMenu += "<a class='parent' href='FAQ.aspx'><span>FAQ</span></a>";
+            strMenu += "</li>";
+            return strMenu;
+        }
+
+        public string strMenuGopY()
+        {
+            string strMenu = "";
+            strMenu += "<li>";
+            strMenu += "<a class='parent' href='GopY.aspx'><span>Góp Ý</span></a>";
+            strMenu += "</li>";
+            return strMenu;
+        }
+        // end of Minh Quang
     }   
 }

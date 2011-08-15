@@ -48,6 +48,8 @@
                 Text="Quản lý hoạt động nổi bật" NavigateUrl="../HDNoiBat.aspx"></asp:MenuItem>
             <asp:MenuItem ImageUrl="~/administration/Common/ico-dashboard.png" 
                 Text="Xem góp ý" NavigateUrl="../GopY.aspx"></asp:MenuItem>
+            <asp:MenuItem ImageUrl="~/administration/Common/ico-dashboard.png" 
+                    Text="Quản lý câu hỏi thường gặp" NavigateUrl="../CauHoiThuongGap.aspx"></asp:MenuItem>
       
         </Items>
     </asp:Menu>   
