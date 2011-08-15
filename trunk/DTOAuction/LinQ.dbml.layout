@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 15.5" name="LinQ">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.5, 16.625" name="LinQ">
   <DataContextMoniker Name="/LinQDataContext" />
   <nestedChildShapes>
     <classShape Id="461a1752-306d-42c6-9857-ef08c70e5964" absoluteBounds="8.75, 4, 2, 1.193992513020834">
@@ -157,7 +157,7 @@
         <classShapeMoniker Id="f87555a3-c686-4d55-b9c8-4c391bb759d6" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.47199625651042); (3.5 : 2.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.47199625651042); (3.5 : 2.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/CHUYENMUC/CHUYENMUC_LOAIBAIVIET" />
       <nodes>
         <classShapeMoniker Id="ef4e3796-61b8-4d7f-89fc-2bd98c0932ef" />
@@ -206,7 +206,7 @@
         <classShapeMoniker Id="4ed05846-0f1d-49bf-bc03-a2ae602422a8" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 9.53049967447917); (4.5 : 14.3854484049479); (6.25 : 14.3854484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.65625 : 9.53049967447917); (4.65625 : 13.84375); (6.25 : 13.84375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/HOATDONG/HOATDONG_THONGBAO" />
       <nodes>
         <classShapeMoniker Id="29698f6b-5c20-45d9-b0e0-4e4f0ca58e21" />
@@ -217,6 +217,12 @@
       <DataClassMoniker Name="/LinQDataContext/GOPY" />
       <nestedChildShapes>
         <elementListCompartment Id="71687ea1-a83b-4740-aecb-e87c1eab91b8" absoluteBounds="0.64000000000000012, 11.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a03ebf45-20a3-49bd-84eb-bcdf9b387178" absoluteBounds="1.875, 15, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LinQDataContext/CAUHOITHUONGGAP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1db36d6f-8195-499a-9232-68dcc923d934" absoluteBounds="1.8900000000000001, 15.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

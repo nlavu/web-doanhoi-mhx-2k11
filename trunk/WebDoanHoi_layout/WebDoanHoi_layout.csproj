@@ -102,10 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="administration\Banner.aspx" />
+    <Content Include="administration\CauHoiThuongGap.aspx" />
     <Content Include="administration\DangNhap.aspx" />
     <Content Include="administration\GopY.aspx" />
     <Content Include="administration\HDNoiBat.aspx" />
     <Content Include="administration\QuangCao.aspx" />
+    <Content Include="administration\templateLoad\CauHoiThuongGap\wucFAQ.ascx" />
     <Content Include="administration\templateLoad\GopY\wucGopY.ascx" />
     <Content Include="App_Themes\administration\jquery\apycom\help.txt" />
     <Content Include="App_Themes\administration\jquery\apycom\images\item-pointer-mover.gif" />
@@ -228,6 +230,7 @@
     <Content Include="css\style-3-col.css" />
     <Content Include="errors\GeneralError.aspx" />
     <Content Include="errors\PageNotFound.aspx" />
+    <Content Include="FAQ.aspx" />
     <Content Include="fckeditor\editor\css\behaviors\disablehandles.htc" />
     <Content Include="fckeditor\editor\css\behaviors\showtableborders.htc" />
     <Content Include="fckeditor\editor\css\fck_editorarea.css" />
@@ -832,6 +835,13 @@
       <DependentUpon>CauHoiKhaoSat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="administration\CauHoiThuongGap.aspx.cs">
+      <DependentUpon>CauHoiThuongGap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administration\CauHoiThuongGap.aspx.designer.cs">
+      <DependentUpon>CauHoiThuongGap.aspx</DependentUpon>
+    </Compile>
     <Compile Include="administration\ChuyenMuc.aspx.cs">
       <DependentUpon>ChuyenMuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1001,6 +1011,13 @@
     </Compile>
     <Compile Include="administration\templateLoad\BaiViet\wucTapTinBaiViet.ascx.designer.cs">
       <DependentUpon>wucTapTinBaiViet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="administration\templateLoad\CauHoiThuongGap\wucFAQ.ascx.cs">
+      <DependentUpon>wucFAQ.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="administration\templateLoad\CauHoiThuongGap\wucFAQ.ascx.designer.cs">
+      <DependentUpon>wucFAQ.ascx</DependentUpon>
     </Compile>
     <Compile Include="administration\templateLoad\GopY\wucGopY.ascx.cs">
       <DependentUpon>wucGopY.ascx</DependentUpon>
@@ -1333,6 +1350,13 @@
     </Compile>
     <Compile Include="errors\PageNotFound.aspx.designer.cs">
       <DependentUpon>PageNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
     </Compile>
     <Compile Include="gioithieu.aspx.cs">
       <DependentUpon>gioithieu.aspx</DependentUpon>

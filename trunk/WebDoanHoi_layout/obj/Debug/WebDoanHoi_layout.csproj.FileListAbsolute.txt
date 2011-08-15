@@ -136,3 +136,26 @@ C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\WebDoanHoi_layout\bin\Google.G
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\WebDoanHoi_layout\bin\BUSAuction.pdb
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\WebDoanHoi_layout\bin\DAOAuction.pdb
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\WebDoanHoi_layout\bin\DTOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.cs
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\administration\templateLoad\BaiViet\wucChuyenMuc.ascx.designer.cs
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\images\ico\favicon_002.ico
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\WebDoanHoi_layout.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\WebDoanHoi_layout.pdb
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\BUSAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\DAOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\DTOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\FredCK.FCKeditorV2.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\Google.GData.AccessControl.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\Google.GData.Apps.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\Google.GData.Client.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\Google.GData.Extensions.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\Google.GData.GoogleBase.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\Google.GData.Photos.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\BUSAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\DAOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\bin\DTOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.csproj.ResolveComReference.cache
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.dll
+C:\Users\Administrator\Desktop\CheckOut1\WebDoanHoi_layout\obj\Debug\WebDoanHoi_layout.pdb

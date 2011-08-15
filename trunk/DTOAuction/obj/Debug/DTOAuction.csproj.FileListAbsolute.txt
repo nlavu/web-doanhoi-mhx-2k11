@@ -52,3 +52,9 @@ C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\bin\Debug\DTOAuctio
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\obj\Debug\DTOAuction.dll
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DTOAuction\obj\Debug\DTOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\DTOAuction\bin\Debug\DTOAuction.dll.config
+C:\Users\Administrator\Desktop\CheckOut1\DTOAuction\bin\Debug\DTOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\DTOAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\DTOAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\CheckOut1\DTOAuction\obj\Debug\DTOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\DTOAuction\obj\Debug\DTOAuction.pdb

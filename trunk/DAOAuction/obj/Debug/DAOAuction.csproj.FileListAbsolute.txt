@@ -78,3 +78,11 @@ C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\bin\Debug\DTOAuctio
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\obj\Debug\DAOAuction.dll
 C:\Users\Ngoc Ha\Desktop\MHX\web-doanhoi-mhx-2k11\DAOAuction\obj\Debug\DAOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\bin\Debug\DAOAuction.dll.config
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\bin\Debug\DAOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\bin\Debug\DAOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\bin\Debug\DTOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\bin\Debug\DTOAuction.pdb
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\obj\Debug\DAOAuction.dll
+C:\Users\Administrator\Desktop\CheckOut1\DAOAuction\obj\Debug\DAOAuction.pdb

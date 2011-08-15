@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="doantn" Class="LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=NgocHa-PC;Initial Catalog=doantn;Integrated Security=True" SettingsObjectName="DTOAuction.Properties.Settings" SettingsPropertyName="doantnConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=doantn;Integrated Security=True" SettingsObjectName="DTOAuction.Properties.Settings" SettingsPropertyName="doantnConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ALBUM" Member="ALBUMs">
     <Type Name="ALBUM">
       <Column Name="MaAlbum" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -194,6 +194,13 @@
       <Column Name="NoiDungGopY" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="MSSV" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="Email" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CAUHOITHUONGGAP" Member="CAUHOITHUONGGAPs">
+    <Type Name="CAUHOITHUONGGAP">
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoiDungCauHoi" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CauTraLoi" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Function Name="dbo.ALBUM_add" Method="ALBUM_add">
@@ -1310,5 +1317,33 @@
       <Column Name="MSSV" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="Email" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.FAQ_getallCauHoi" Method="FAQ_getallCauHoi">
+    <ElementType Name="FAQ_getallCauHoiResult">
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDungCauHoi" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FAQ_getallFAQ" Method="FAQ_getallFAQ">
+    <ElementType Name="FAQ_getallFAQResult">
+      <Column Name="MaCauHoi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDungCauHoi" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="CauTraLoi" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FAQ_add" Method="FAQ_add">
+    <Parameter Name="noidungcauhoi" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cautraloi" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FAQ_del" Method="FAQ_del">
+    <Parameter Name="macauhoi" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.FAQ_modify" Method="FAQ_modify">
+    <Parameter Name="macauhoi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="noidungcauhoi" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cautraloi" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
